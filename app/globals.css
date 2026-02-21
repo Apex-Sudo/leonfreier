@@ -1,1 +1,83 @@
 @import "tailwindcss";
+
+:root {
+  --bg: #FAFAF8;
+  --foreground: #1A1A1A;
+  --muted: #737373;
+  --accent: #B8916A;
+  --accent-dark: #A07D5A;
+  --border: #E8E5E0;
+  --glass: rgba(184, 145, 106, 0.04);
+  --glass-border: rgba(184, 145, 106, 0.10);
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent-dark: var(--accent-dark);
+  --color-border: var(--border);
+  --color-glass: var(--glass);
+  --color-glass-border: var(--glass-border);
+}
+
+body {
+  background: var(--bg);
+  color: var(--foreground);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Glass card */
+.glass-card {
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 16px;
+}
+
+/* Section module */
+.section-module {
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  padding: 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .section-module {
+    padding: 3.5rem;
+  }
+}
+
+/* Hero gradient */
+.gradient-hero {
+  background: radial-gradient(ellipse 80% 50% at 50% 20%, rgba(184, 145, 106, 0.05) 0%, transparent 70%);
+}
+
+/* Photo glow ring */
+.photo-ring {
+  box-shadow: 0 0 0 4px rgba(184, 145, 106, 0.12), 0 8px 32px rgba(184, 145, 106, 0.08);
+}
+
+/* Accent link */
+.accent-link {
+  color: var(--foreground);
+  opacity: 0.7;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.accent-link:hover {
+  color: var(--accent);
+  opacity: 1;
+}
+
+/* Company name styling */
+.company-name {
+  color: var(--accent);
+  font-weight: 600;
+}
