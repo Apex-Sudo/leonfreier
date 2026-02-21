@@ -3,10 +3,10 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Leon Freier",
-  description: "I build things from zero. Strategy, operations, go-to-market. Three companies, two continents, no outside capital.",
+  description: "I build things from zero. Three companies, two continents, no outside capital.",
   openGraph: {
     title: "Leon Freier",
-    description: "Strategy. Operations. Go-to-market.",
+    description: "Strategy.",
     url: "https://leonfreier.com",
     siteName: "Leon Freier",
     images: [{ url: "https://leonfreier.com/og-image.png", width: 1200, height: 630, alt: "Leon Freier" }],
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Leon Freier",
-    description: "Strategy. Operations. Go-to-market.",
+    description: "Strategy.",
     images: ["https://leonfreier.com/og-image.png"],
   },
 };

@@ -19,8 +19,7 @@ export default function Home() {
             <div>
               <h1 className="text-3xl md:text-5xl font-semibold tracking-tight mb-4">Leon Freier</h1>
               <p className="text-[15px] md:text-[17px] leading-relaxed text-foreground/75 max-w-lg">
-                I build things from zero. Strategy, operations, go-to-market.
-                Three companies, two continents, no outside capital.
+                I build things from zero. Three companies, two continents, no outside capital.
               </p>
               <p className="text-muted text-[13px] mt-4">Hamburg, Germany</p>
             </div>
