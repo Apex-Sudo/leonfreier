@@ -3,7 +3,21 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Leon Freier",
-  description: "Strategy, positioning, and GTM architecture for early-stage founders.",
+  description: "I build things from zero. Strategy, code, operations, go-to-market. Three companies, two continents, no outside capital.",
+  openGraph: {
+    title: "Leon Freier",
+    description: "Strategy. Code. Operations. Go-to-market.",
+    url: "https://leonfreier.com",
+    siteName: "Leon Freier",
+    images: [{ url: "https://leonfreier.com/og-image.png", width: 1200, height: 630, alt: "Leon Freier" }],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Leon Freier",
+    description: "Strategy. Code. Operations. Go-to-market.",
+    images: ["https://leonfreier.com/og-image.png"],
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
