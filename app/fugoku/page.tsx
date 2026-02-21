@@ -61,7 +61,7 @@ export default function FugokuProposal() {
               </p>
               <div className="border-t border-border pt-4 space-y-3">
                 <div className="text-center mb-2">
-                  <span className="text-[28px] font-bold text-foreground">$1,500</span>
+                  <span className="text-[28px] font-bold text-foreground">$2,500</span>
                   <span className="text-[13px] text-muted">/mo</span>
                 </div>
                 <div className="flex justify-between text-[13px]">
@@ -92,7 +92,7 @@ export default function FugokuProposal() {
               </p>
               <div className="border-t border-accent/20 pt-4 space-y-3">
                 <div className="text-center mb-2">
-                  <span className="text-[28px] font-bold text-foreground">$2,500</span>
+                  <span className="text-[28px] font-bold text-foreground">$4,000</span>
                   <span className="text-[13px] text-muted">/mo</span>
                 </div>
                 <div className="flex justify-between text-[13px]">
@@ -120,7 +120,7 @@ export default function FugokuProposal() {
               </p>
               <div className="border-t border-border pt-4 space-y-3">
                 <div className="text-center mb-2">
-                  <span className="text-[28px] font-bold text-foreground">$1,500</span>
+                  <span className="text-[28px] font-bold text-foreground">$3,000</span>
                   <span className="text-[13px] text-muted">/mo</span>
                 </div>
                 <div className="flex justify-between text-[13px]">
