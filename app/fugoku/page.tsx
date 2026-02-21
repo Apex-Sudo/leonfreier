@@ -47,76 +47,94 @@ export default function FugokuProposal() {
 
       {/* ═══ Scope Options ═══ */}
       <section className="px-6 pt-8 pb-20 md:pb-28">
-        <div className="max-w-2xl mx-auto">
+        <div className="max-w-4xl mx-auto">
           <h2 className="text-[11px] font-medium tracking-widest text-muted uppercase mb-10">Scope</h2>
           
-          <div className="space-y-8">
+          <div className="grid md:grid-cols-3 gap-5">
             {/* Option A */}
-            <div className="glass-card p-8 md:p-10 transition-all duration-200 hover:border-accent/20">
-              <div className="flex items-start justify-between mb-5">
-                <h3 className="text-[18px] font-semibold text-foreground">Strategy + Architecture</h3>
-                <span className="text-[11px] font-medium text-muted bg-foreground/5 px-3 py-1.5 rounded-full shrink-0 ml-4">5h/week</span>
-              </div>
-              <p className="text-[14px] leading-relaxed text-foreground/60 mb-6">
+            <div className="glass-card p-6 md:p-7 transition-all duration-200 hover:border-accent/20 flex flex-col">
+              <span className="text-[11px] font-medium text-muted bg-foreground/5 px-3 py-1 rounded-full self-start mb-4">5h/week</span>
+              <h3 className="text-[16px] font-semibold text-foreground mb-3">Strategy + Architecture</h3>
+              <p className="text-[13px] leading-relaxed text-foreground/55 mb-6 flex-1">
                 Weekly 1-hour calls. Written deliverables: roadmap, GTM, positioning. 
                 No day-to-day involvement.
               </p>
-              <div className="border-t border-border pt-5 grid grid-cols-2 gap-y-4">
-                <span className="text-[13px] text-muted">Retainer</span>
-                <span className="text-[17px] font-semibold text-foreground text-right">$1,500<span className="text-[12px] font-normal text-muted">/mo</span></span>
-                <span className="text-[13px] text-muted">Equity</span>
-                <span className="text-[17px] font-semibold text-foreground text-right">5%</span>
-                <span className="text-[13px] text-muted">Vesting</span>
-                <span className="text-[14px] text-foreground/70 text-right">1 year, no cliff</span>
-                <span className="text-[13px] text-muted">Starts</span>
-                <span className="text-[14px] text-foreground/70 text-right">March 1, 2026</span>
+              <div className="border-t border-border pt-4 space-y-3">
+                <div className="text-center mb-2">
+                  <span className="text-[28px] font-bold text-foreground">$1,500</span>
+                  <span className="text-[13px] text-muted">/mo</span>
+                </div>
+                <div className="flex justify-between text-[13px]">
+                  <span className="text-muted">Equity</span>
+                  <span className="font-medium text-foreground">5%</span>
+                </div>
+                <div className="flex justify-between text-[13px]">
+                  <span className="text-muted">Vesting</span>
+                  <span className="text-foreground/70">1yr, no cliff</span>
+                </div>
+                <div className="flex justify-between text-[13px]">
+                  <span className="text-muted">Starts</span>
+                  <span className="text-foreground/70">March 1</span>
+                </div>
               </div>
             </div>
 
             {/* Option B — Recommended */}
-            <div className="relative glass-card p-8 md:p-10 ring-2 ring-accent/40 shadow-[0_0_40px_rgba(184,145,106,0.08)] transition-all duration-200">
-              <div className="absolute -top-3 left-8">
-                <span className="text-[11px] font-semibold text-white bg-accent px-4 py-1 rounded-full tracking-wide">RECOMMENDED</span>
+            <div className="relative glass-card p-6 md:p-7 ring-2 ring-accent/40 shadow-[0_0_40px_rgba(184,145,106,0.08)] transition-all duration-200 flex flex-col md:-mt-3 md:mb-[-12px]">
+              <div className="absolute -top-3 left-1/2 -translate-x-1/2">
+                <span className="text-[10px] font-semibold text-white bg-accent px-4 py-1 rounded-full tracking-wide whitespace-nowrap">RECOMMENDED</span>
               </div>
-              <div className="flex items-start justify-between mb-5 mt-2">
-                <h3 className="text-[18px] font-semibold text-foreground">Strategy + Accountability</h3>
-                <span className="text-[11px] font-medium text-muted bg-foreground/5 px-3 py-1.5 rounded-full shrink-0 ml-4">10h/week</span>
-              </div>
-              <p className="text-[14px] leading-relaxed text-foreground/60 mb-6">
+              <span className="text-[11px] font-medium text-muted bg-foreground/5 px-3 py-1 rounded-full self-start mb-4 mt-2">10h/week</span>
+              <h3 className="text-[16px] font-semibold text-foreground mb-3">Strategy + Accountability</h3>
+              <p className="text-[13px] leading-relaxed text-foreground/55 mb-6 flex-1">
                 Everything in Strategy, plus EOS implementation, weekly scorecard reviews, 
                 and issue resolution. Fractional CSO role.
               </p>
-              <div className="border-t border-accent/20 pt-5 grid grid-cols-2 gap-y-4">
-                <span className="text-[13px] text-muted">Retainer</span>
-                <span className="text-[17px] font-semibold text-foreground text-right">$2,500<span className="text-[12px] font-normal text-muted">/mo</span></span>
-                <span className="text-[13px] text-muted">Equity</span>
-                <span className="text-[17px] font-semibold text-foreground text-right">10%</span>
-                <span className="text-[13px] text-muted">Vesting</span>
-                <span className="text-[14px] text-foreground/70 text-right">1 year, no cliff</span>
-                <span className="text-[13px] text-muted">Starts</span>
-                <span className="text-[14px] text-foreground/70 text-right">March 1, 2026</span>
+              <div className="border-t border-accent/20 pt-4 space-y-3">
+                <div className="text-center mb-2">
+                  <span className="text-[28px] font-bold text-foreground">$2,500</span>
+                  <span className="text-[13px] text-muted">/mo</span>
+                </div>
+                <div className="flex justify-between text-[13px]">
+                  <span className="text-muted">Equity</span>
+                  <span className="font-medium text-foreground">10%</span>
+                </div>
+                <div className="flex justify-between text-[13px]">
+                  <span className="text-muted">Vesting</span>
+                  <span className="text-foreground/70">1yr, no cliff</span>
+                </div>
+                <div className="flex justify-between text-[13px]">
+                  <span className="text-muted">Starts</span>
+                  <span className="text-foreground/70">March 1</span>
+                </div>
               </div>
             </div>
 
             {/* Option C */}
-            <div className="glass-card p-8 md:p-10 transition-all duration-200 hover:border-accent/20">
-              <div className="flex items-start justify-between mb-5">
-                <h3 className="text-[18px] font-semibold text-foreground">Strategy + Execution</h3>
-                <span className="text-[11px] font-medium text-muted bg-foreground/5 px-3 py-1.5 rounded-full shrink-0 ml-4">15–20h/week</span>
-              </div>
-              <p className="text-[14px] leading-relaxed text-foreground/60 mb-6">
+            <div className="glass-card p-6 md:p-7 transition-all duration-200 hover:border-accent/20 flex flex-col">
+              <span className="text-[11px] font-medium text-muted bg-foreground/5 px-3 py-1 rounded-full self-start mb-4">15–20h/week</span>
+              <h3 className="text-[16px] font-semibold text-foreground mb-3">Strategy + Execution</h3>
+              <p className="text-[13px] leading-relaxed text-foreground/55 mb-6 flex-1">
                 Everything in Accountability, plus direct execution: outreach, partnerships, 
                 vendor negotiations. Lower cash, higher equity.
               </p>
-              <div className="border-t border-border pt-5 grid grid-cols-2 gap-y-4">
-                <span className="text-[13px] text-muted">Retainer</span>
-                <span className="text-[17px] font-semibold text-foreground text-right">$1,500<span className="text-[12px] font-normal text-muted">/mo</span></span>
-                <span className="text-[13px] text-muted">Equity</span>
-                <span className="text-[17px] font-semibold text-foreground text-right">15%</span>
-                <span className="text-[13px] text-muted">Vesting</span>
-                <span className="text-[14px] text-foreground/70 text-right">1 year, 3-month cliff</span>
-                <span className="text-[13px] text-muted">Starts</span>
-                <span className="text-[14px] text-foreground/70 text-right">March 1, 2026</span>
+              <div className="border-t border-border pt-4 space-y-3">
+                <div className="text-center mb-2">
+                  <span className="text-[28px] font-bold text-foreground">$1,500</span>
+                  <span className="text-[13px] text-muted">/mo</span>
+                </div>
+                <div className="flex justify-between text-[13px]">
+                  <span className="text-muted">Equity</span>
+                  <span className="font-medium text-foreground">15%</span>
+                </div>
+                <div className="flex justify-between text-[13px]">
+                  <span className="text-muted">Vesting</span>
+                  <span className="text-foreground/70">1yr, 3mo cliff</span>
+                </div>
+                <div className="flex justify-between text-[13px]">
+                  <span className="text-muted">Starts</span>
+                  <span className="text-foreground/70">March 1</span>
+                </div>
               </div>
             </div>
           </div>
