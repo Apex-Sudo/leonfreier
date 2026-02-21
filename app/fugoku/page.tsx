@@ -79,7 +79,7 @@ export default function FugokuProposal() {
               </div>
               <p className="text-[14px] leading-relaxed text-foreground/65 mb-5">
                 Everything in Strategy, plus EOS implementation, weekly scorecard reviews, 
-                and issue resolution. Fractional COO role.
+                and issue resolution. Fractional CSO role.
               </p>
               <div className="border-t border-border pt-4 space-y-2">
                 <div className="flex justify-between text-[14px]">
