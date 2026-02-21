@@ -210,6 +210,23 @@ export default function FugokuProposal() {
         </div>
       </section>
 
+      {/* ═══ Case Study ═══ */}
+      <section className="px-6 pb-16">
+        <div className="max-w-2xl mx-auto">
+          <h2 className="text-[11px] font-medium tracking-widest text-muted uppercase mb-8">Case Study Rights</h2>
+          <div className="glass-card p-8">
+            <p className="text-[15px] leading-relaxed text-foreground/75 mb-4">
+              I reserve the right to document this engagement as a public case study 
+              on leonfreier.com after 90 days, covering strategy, process, and outcomes.
+            </p>
+            <p className="text-[14px] leading-relaxed text-foreground/55">
+              No proprietary data, financials, or technical IP disclosed without written approval. 
+              The case study covers methodology, not secrets. You get final review before publication.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* ═══ Principles ═══ */}
       <section className="px-6 pb-20 md:pb-28">
         <div className="max-w-2xl mx-auto">
