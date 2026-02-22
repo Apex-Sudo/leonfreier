@@ -96,13 +96,13 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
 
           </div>
 
-          <div className="mt-8 pt-6 border-t border-border">
-            <p className="text-[14px] text-foreground/45">
-              {t.value_p1}{" "}
-              <a href={`/${lang === 'en' ? '' : lang + '/'}spielzuege`} className="accent-link">
-                {t.see_work} &rarr;
-              </a>
+          <div className="mt-10 bg-[#1A1A1A] rounded-2xl p-8 md:p-10">
+            <p className="text-[17px] md:text-[19px] font-medium text-[#FAFAF8]/90 leading-relaxed">
+              {t.value_p1}
             </p>
+            <a href={`/${lang === 'en' ? '' : lang + '/'}spielzuege`} className="inline-block mt-5 text-[14px] font-medium text-[#B8916A] hover:text-[#FAFAF8] transition-colors">
+              {t.see_work} &rarr;
+            </a>
           </div>
         </div>
       </section>
