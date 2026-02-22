@@ -1,5 +1,7 @@
 "use client";
 
+import { useState } from "react";
+
 const sections = [
   {
     num: "§1",
@@ -102,6 +104,8 @@ const sections = [
 ];
 
 export default function AgreementDoc() {
+  const [selectedOption, setSelectedOption] = useState<string | null>(null);
+
   const handleExportPDF = () => {
     window.print();
   };
@@ -198,31 +202,46 @@ export default function AgreementDoc() {
               {/* Scope options */}
               {section.options && (
                 <div className="mt-6 space-y-4">
-                  {section.options.map((opt) => (
-                    <div
-                      key={opt.label}
-                      className={`p-6 rounded-xl border transition-all ${
-                        opt.recommended
-                          ? "border-accent/30 bg-accent/[0.03]"
-                          : "border-border/50 bg-foreground/[0.01]"
-                      }`}
-                    >
-                      <div className="flex items-center gap-3 mb-2">
-                        <span className="text-[13px] font-semibold text-foreground/90">
-                          {opt.label} &mdash; {opt.name}
-                        </span>
-                        {opt.recommended && (
-                          <span className="text-[9px] font-semibold tracking-wider text-accent bg-accent/10 px-2.5 py-0.5 rounded-full uppercase">
-                            Recommended
+                  {section.options.map((opt) => {
+                    const isSelected = selectedOption === opt.label;
+                    return (
+                      <button
+                        key={opt.label}
+                        onClick={() => setSelectedOption(isSelected ? null : opt.label)}
+                        className={`w-full text-left p-6 rounded-xl border transition-all cursor-pointer ${
+                          isSelected
+                            ? "border-accent ring-2 ring-accent/20 bg-accent/[0.05]"
+                            : opt.recommended
+                            ? "border-accent/30 bg-accent/[0.03] hover:border-accent/50"
+                            : "border-border/50 bg-foreground/[0.01] hover:border-border"
+                        }`}
+                      >
+                        <div className="flex items-center gap-3 mb-2">
+                          <div className={`w-4 h-4 rounded-full border-2 flex items-center justify-center shrink-0 transition-all ${
+                            isSelected ? "border-accent bg-accent" : "border-foreground/20"
+                          }`}>
+                            {isSelected && (
+                              <svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round">
+                                <polyline points="20 6 9 17 4 12" />
+                              </svg>
+                            )}
+                          </div>
+                          <span className="text-[13px] font-semibold text-foreground/90">
+                            {opt.label} &mdash; {opt.name}
                           </span>
-                        )}
-                      </div>
-                      <p className="text-[12px] text-accent/70 mb-2" style={{ fontFamily: "Georgia, serif" }}>
-                        {opt.terms}
-                      </p>
-                      <p className="text-[13px] text-foreground/55 leading-relaxed">{opt.desc}</p>
-                    </div>
-                  ))}
+                          {opt.recommended && (
+                            <span className="text-[9px] font-semibold tracking-wider text-accent bg-accent/10 px-2.5 py-0.5 rounded-full uppercase">
+                              Recommended
+                            </span>
+                          )}
+                        </div>
+                        <p className="text-[12px] text-accent/70 mb-2 pl-7" style={{ fontFamily: "Georgia, serif" }}>
+                          {opt.terms}
+                        </p>
+                        <p className="text-[13px] text-foreground/55 leading-relaxed pl-7">{opt.desc}</p>
+                      </button>
+                    );
+                  })}
                 </div>
               )}
             </div>
