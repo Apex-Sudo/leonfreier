@@ -44,7 +44,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </a>
             <div className="flex items-center gap-6">
               <a href="/cases" className="text-[13px] text-foreground/60 hover:text-foreground transition-colors">
-                Cases
+                Plays
               </a>
               <a href="mailto:leon@maxresult.ai" className="text-[13px] text-foreground/60 hover:text-foreground transition-colors">
                 Contact
