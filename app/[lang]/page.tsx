@@ -10,19 +10,19 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
     <main className="min-h-screen">
 
       {/* ═══ Hero ═══ */}
-      <section className="gradient-hero px-6 pt-28 pb-14 md:pt-40 md:pb-20">
+      <section className="gradient-hero px-6 pt-28 pb-8 md:pt-36 md:pb-12">
         <div className="max-w-3xl mx-auto">
           <div className="flex flex-col md:flex-row md:items-start gap-8 md:gap-12">
             <Image
               src="/leon.webp"
               alt="Leon Freier"
-              width={200}
-              height={200}
-              className="rounded-2xl photo-ring flex-shrink-0 w-[160px] h-[160px] md:w-[200px] md:h-[200px] object-cover"
+              width={220}
+              height={220}
+              className="rounded-2xl photo-ring flex-shrink-0 w-[160px] h-[160px] md:w-[220px] md:h-[220px] object-cover"
               priority
             />
             <div>
-              <h1 className="text-3xl md:text-5xl font-semibold tracking-tight mb-3">Leon Freier</h1>
+              <h1 className="text-4xl md:text-[3.5rem] font-bold tracking-tight leading-[1.1] mb-3">Leon Freier</h1>
               <p className="text-accent font-medium text-[14px] tracking-wide mb-4">{t.tagline}</p>
               <p className="text-[15px] md:text-[17px] leading-relaxed text-foreground/75 max-w-lg">
                 {t.intro}
@@ -34,7 +34,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
       </section>
 
       {/* ═══ Belief ═══ */}
-      <section className="px-6 py-14 md:py-20">
+      <section className="belief-section px-6 py-10 md:py-14">
         <div className="max-w-3xl mx-auto">
           <p className="text-[22px] md:text-[28px] font-semibold leading-snug tracking-tight text-foreground/90 max-w-2xl">
             {t.belief_1}
@@ -45,7 +45,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
       </section>
 
       {/* ═══ Dark break ═══ */}
-      <section className="bg-[#1A1A1A] text-[#FAFAF8] px-6 py-12 md:py-14">
+      <section className="bg-[#1A1A1A] text-[#FAFAF8] px-6 py-10 md:py-12">
         <div className="max-w-3xl mx-auto">
           <p className="text-[17px] md:text-[19px] font-medium text-[#FAFAF8]/70">
             {t.pattern_text}
@@ -54,11 +54,11 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
       </section>
 
       {/* ═══ Companies ═══ */}
-      <section className="px-6 py-14 md:py-20">
+      <section className="px-6 py-10 md:py-14">
         <div className="max-w-3xl mx-auto">
-          <div className="space-y-5">
+          <div className="space-y-4">
 
-            <div className="glass-card p-7 transition-all duration-200 hover:border-accent/20">
+            <div className="glass-card p-7 transition-all duration-200 hover:border-accent/20 hover:shadow-md">
               <div className="flex items-baseline justify-between gap-4">
                 <a href="https://danangbeachvillas.com" target="_blank" rel="noopener noreferrer" className="company-name hover:underline decoration-accent/30 underline-offset-4">
                   Da Nang Beach Villas
@@ -70,7 +70,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
               </p>
             </div>
 
-            <div className="glass-card p-7 transition-all duration-200 hover:border-accent/20">
+            <div className="glass-card p-7 transition-all duration-200 hover:border-accent/20 hover:shadow-md">
               <div className="flex items-baseline justify-between gap-4">
                 <a href="https://apexalpha.app" target="_blank" rel="noopener noreferrer" className="company-name hover:underline decoration-accent/30 underline-offset-4">
                   ApexAlpha
@@ -82,7 +82,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
               </p>
             </div>
 
-            <div className="glass-card p-7 transition-all duration-200 hover:border-accent/20">
+            <div className="glass-card p-7 transition-all duration-200 hover:border-accent/20 hover:shadow-md">
               <div className="flex items-baseline justify-between gap-4">
                 <a href="https://forgehouse.io" target="_blank" rel="noopener noreferrer" className="company-name hover:underline decoration-accent/30 underline-offset-4">
                   ForgeHouse
@@ -96,7 +96,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
 
           </div>
 
-          <div className="mt-10 bg-[#1A1A1A] rounded-2xl p-8 md:p-10">
+          <div className="mt-8 bg-[#1A1A1A] rounded-2xl p-8 md:p-10">
             <p className="text-[17px] md:text-[19px] font-medium text-[#FAFAF8]/90 leading-relaxed">
               {t.value_p1}
             </p>
@@ -108,9 +108,9 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
       </section>
 
       {/* ═══ Writing + Contact ═══ */}
-      <section className="px-6 pb-16 md:pb-24">
+      <section className="px-6 pb-12 md:pb-18">
         <div className="max-w-3xl mx-auto">
-          <div className="glass-card p-8">
+          <div className="contact-card p-8">
             <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-8">
               <div>
                 <h2 className="text-[11px] font-medium tracking-widest text-muted uppercase mb-4">{t.writing}</h2>
@@ -140,8 +140,8 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
       </section>
 
       {/* ═══ Footer ═══ */}
-      <footer className="px-6 pt-8 pb-12">
-        <div className="max-w-3xl mx-auto border-t border-border pt-8">
+      <footer className="px-6 pt-6 pb-10">
+        <div className="max-w-3xl mx-auto border-t border-border pt-6">
           <p className="text-[13px] text-muted/50">{t.footer}</p>
         </div>
       </footer>

@@ -2,17 +2,19 @@
 
 :root {
   --bg: #FAFAF8;
+  --bg-warm: #F5F3F0;
   --foreground: #1A1A1A;
   --muted: #737373;
   --accent: #B8916A;
   --accent-dark: #A07D5A;
   --border: #E8E5E0;
-  --glass: rgba(184, 145, 106, 0.04);
-  --glass-border: rgba(184, 145, 106, 0.10);
+  --glass: rgba(184, 145, 106, 0.07);
+  --glass-border: rgba(184, 145, 106, 0.14);
 }
 
 @theme inline {
   --color-bg: var(--bg);
+  --color-bg-warm: var(--bg-warm);
   --color-foreground: var(--foreground);
   --color-muted: var(--muted);
   --color-accent: var(--accent);
@@ -34,9 +36,10 @@ body {
 .glass-card {
   background: var(--glass);
   border: 1px solid var(--glass-border);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border-radius: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04), 0 4px 12px rgba(0, 0, 0, 0.02);
 }
 
 /* Section module */
@@ -53,14 +56,36 @@ body {
   }
 }
 
-/* Hero gradient */
+/* Hero gradient - warmer, more prominent */
 .gradient-hero {
-  background: radial-gradient(ellipse 80% 50% at 50% 20%, rgba(184, 145, 106, 0.05) 0%, transparent 70%);
+  background:
+    radial-gradient(ellipse 90% 60% at 50% 10%, rgba(184, 145, 106, 0.08) 0%, transparent 70%),
+    radial-gradient(ellipse 50% 40% at 80% 60%, rgba(184, 145, 106, 0.04) 0%, transparent 70%);
 }
 
-/* Photo glow ring */
+/* Photo glow ring - more presence */
 .photo-ring {
-  box-shadow: 0 0 0 4px rgba(184, 145, 106, 0.12), 0 8px 32px rgba(184, 145, 106, 0.08);
+  box-shadow:
+    0 0 0 4px rgba(184, 145, 106, 0.15),
+    0 8px 32px rgba(184, 145, 106, 0.12),
+    0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+/* Belief section background */
+.belief-section {
+  background: var(--bg-warm);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+/* Contact card - differentiated */
+.contact-card {
+  background: linear-gradient(135deg, rgba(184, 145, 106, 0.06) 0%, rgba(184, 145, 106, 0.02) 100%);
+  border: 1px solid rgba(184, 145, 106, 0.18);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(184, 145, 106, 0.06);
 }
 
 /* Accent link */
