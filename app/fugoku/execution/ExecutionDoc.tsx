@@ -1,5 +1,7 @@
 "use client";
 
+import { useState } from "react";
+
 const sections = [
   {
     num: "01",
@@ -161,9 +163,34 @@ export default function ExecutionDoc() {
                         <span className="text-[12px] font-medium text-foreground/60">{field.label}</span>
                         {field.hint && <span className="text-[11px] text-foreground/30">{field.hint}</span>}
                       </div>
-                      <div className="border-b border-foreground/10 h-8" />
+                      <textarea
+                        rows={1}
+                        placeholder="Type here..."
+                        className="w-full bg-transparent border-b border-foreground/10 focus:border-accent/40 outline-none resize-none text-[14px] text-foreground/80 py-2 transition-colors placeholder:text-foreground/15"
+                        onInput={(e) => {
+                          const t = e.target as HTMLTextAreaElement;
+                          t.style.height = "auto";
+                          t.style.height = t.scrollHeight + "px";
+                        }}
+                      />
                     </div>
                   ))}
+                </div>
+              )}
+
+              {/* General response area (for sections without fields) */}
+              {!section.fields && (
+                <div className="mb-5">
+                  <textarea
+                    rows={3}
+                    placeholder="Your answer..."
+                    className="w-full bg-foreground/[0.01] border border-border/30 rounded-lg focus:border-accent/40 outline-none resize-none text-[14px] text-foreground/80 p-4 transition-colors placeholder:text-foreground/15"
+                    onInput={(e) => {
+                      const t = e.target as HTMLTextAreaElement;
+                      t.style.height = "auto";
+                      t.style.height = t.scrollHeight + "px";
+                    }}
+                  />
                 </div>
               )}
 
