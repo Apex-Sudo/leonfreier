@@ -182,7 +182,11 @@ export default function ForgeHouseCase() {
             </p>
             <p className="text-[15px] md:text-[16px] leading-relaxed text-foreground/50">
               The constraint was never time or money. It was seeing the full picture 
-              clearly enough to build it in one pass.
+              clearly enough to build it in one pass.*
+            </p>
+            <p className="text-[13px] text-foreground/35 mt-6">
+              *The actual constraint was GoDaddy DNS propagation. The product was done 
+              before the domain pointed to it.
             </p>
           </div>
         </div>
