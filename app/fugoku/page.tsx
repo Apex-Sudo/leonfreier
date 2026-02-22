@@ -230,14 +230,7 @@ export default function FugokuProposal() {
         <div className="max-w-2xl mx-auto">
           <div className="border-t border-border pt-12">
             <div className="grid md:grid-cols-2 gap-10">
-              <div>
-                <h3 className="text-[11px] font-medium tracking-widest text-muted uppercase mb-4">Case Study Rights</h3>
-                <p className="text-[13px] leading-relaxed text-foreground/50">
-                  I reserve the right to document this engagement as a public case study 
-                  on leonfreier.com after 90 days. No proprietary data, financials, or technical IP 
-                  without written approval. You get final review before publication.
-                </p>
-              </div>
+              <div></div>
               <div>
                 <h3 className="text-[11px] font-medium tracking-widest text-muted uppercase mb-4">How This Works</h3>
                 <p className="text-[13px] leading-relaxed text-foreground/50">
