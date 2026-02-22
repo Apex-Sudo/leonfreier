@@ -80,6 +80,57 @@ const sections = [
 ];
 
 export default function ExecutionDoc() {
+  const [submitting, setSubmitting] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleSubmit = async () => {
+    setSubmitting(true);
+    try {
+      // Collect all data from textareas
+      const sectionEls = document.querySelectorAll("[data-section]");
+      const payload: Array<{
+        num: string;
+        title: string;
+        answer?: string;
+        fields?: Array<{ label: string; value: string }>;
+      }> = [];
+
+      sectionEls.forEach((el) => {
+        const num = el.getAttribute("data-section") || "";
+        const title = el.getAttribute("data-title") || "";
+        const fieldTextareas = el.querySelectorAll("[data-field]");
+        const answerTextarea = el.querySelector("[data-answer]") as HTMLTextAreaElement | null;
+
+        const fields: Array<{ label: string; value: string }> = [];
+        fieldTextareas.forEach((ft) => {
+          fields.push({
+            label: ft.getAttribute("data-field") || "",
+            value: (ft as HTMLTextAreaElement).value,
+          });
+        });
+
+        payload.push({
+          num,
+          title,
+          answer: answerTextarea?.value || "",
+          fields: fields.length ? fields : undefined,
+        });
+      });
+
+      await fetch("/api/fugoku-submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ sections: payload }),
+      });
+
+      setSubmitted(true);
+    } catch {
+      alert("Something went wrong. Please try again.");
+    } finally {
+      setSubmitting(false);
+    }
+  };
+
   return (
     <>
       <style jsx global>{`
@@ -120,7 +171,7 @@ export default function ExecutionDoc() {
 
           {/* Sections */}
           {sections.map((section) => (
-            <div key={section.num} className="mb-16">
+            <div key={section.num} className="mb-16" data-section={section.num} data-title={section.title}>
               {/* Section header */}
               <div className="flex items-baseline gap-3 mb-2">
                 <span className="text-[12px] font-medium text-accent/60" style={{ fontFamily: "Georgia, serif" }}>
@@ -165,6 +216,7 @@ export default function ExecutionDoc() {
                       </div>
                       <textarea
                         rows={1}
+                        data-field={field.label}
                         placeholder="Type here..."
                         className="w-full bg-transparent border-b border-foreground/10 focus:border-accent/40 outline-none resize-none text-[14px] text-foreground/80 py-2 transition-colors placeholder:text-foreground/15"
                         onInput={(e) => {
@@ -183,6 +235,7 @@ export default function ExecutionDoc() {
                 <div className="mb-5">
                   <textarea
                     rows={3}
+                    data-answer=""
                     placeholder="Your answer..."
                     className="w-full bg-foreground/[0.01] border border-border/30 rounded-lg focus:border-accent/40 outline-none resize-none text-[14px] text-foreground/80 p-4 transition-colors placeholder:text-foreground/15"
                     onInput={(e) => {
@@ -204,13 +257,23 @@ export default function ExecutionDoc() {
 
           {/* Bottom CTA */}
           <div className="print-hide mt-16 text-center">
-            <button
-              onClick={() => window.print()}
-              className="inline-block text-[15px] font-medium px-8 py-3.5 rounded-xl bg-accent text-white hover:bg-accent-dark transition-colors duration-200"
-            >
-              Export
-            </button>
-            <p className="text-[13px] text-foreground/35 mt-4">Print or save as PDF.</p>
+            {submitted ? (
+              <div>
+                <p className="text-[16px] font-medium text-accent">Submitted.</p>
+                <p className="text-[13px] text-foreground/35 mt-2">We&apos;ll be in touch.</p>
+              </div>
+            ) : (
+              <div>
+                <button
+                  onClick={handleSubmit}
+                  disabled={submitting}
+                  className="inline-block text-[15px] font-medium px-8 py-3.5 rounded-xl bg-accent text-white hover:bg-accent-dark transition-colors duration-200 disabled:opacity-50"
+                >
+                  {submitting ? "Submitting..." : "Submit"}
+                </button>
+                <p className="text-[13px] text-foreground/35 mt-4">Your answers go directly to Leon.</p>
+              </div>
+            )}
           </div>
 
           {/* Footer */}
