@@ -33,18 +33,7 @@ export default function FugokuProposal() {
         </div>
       </section>
 
-      {/* ═══ What's Already Done ═══ */}
-      <section className="px-6 pb-12">
-        <div className="max-w-2xl mx-auto">
-          <div className="border-l-2 border-accent/40 pl-6 py-2">
-            <p className="text-[14px] leading-relaxed text-foreground/60">
-              The 4-stage strategy is designed: compute resale → managed deployment → identity graph → marketplace. 
-              Each stage funds the next. Zero outside capital required. 
-              This proposal covers how we execute it together.
-            </p>
-          </div>
-        </div>
-      </section>
+      {/* spacer */}
 
       {/* ═══ Scope Options ═══ */}
       <section className="px-6 pt-8 pb-20 md:pb-28">
