@@ -23,10 +23,8 @@ export default function FugokuProposal() {
       <section className="px-6 py-16 md:py-20">
         <div className="max-w-2xl mx-auto">
           <div className="section-module">
-            <p className="text-[16px] md:text-[17px] leading-relaxed text-foreground/80">
-              Before we build, we align on how we work together. 
-              This document covers scope, compensation, and cadence. 
-              Pick what fits. Everything else follows.
+            <p className="text-[20px] md:text-[22px] font-semibold tracking-tight text-foreground/80">
+              Alignment. Agreement. Execution.
             </p>
           </div>
         </div>
