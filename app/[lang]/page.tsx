@@ -95,18 +95,15 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
             </div>
 
           </div>
-        </div>
-      </section>
 
-      {/* ═══ Value + link ═══ */}
-      <section className="px-6 pb-14 md:pb-20">
-        <div className="max-w-3xl mx-auto">
-          <p className="text-[14px] text-foreground/50">
-            {t.value_p1}{" "}
-            <a href={`/${lang === 'en' ? '' : lang + '/'}spielzuege`} className="accent-link">
-              {t.see_work} &rarr;
-            </a>
-          </p>
+          <div className="mt-8 pt-6 border-t border-border">
+            <p className="text-[14px] text-foreground/45">
+              {t.value_p1}{" "}
+              <a href={`/${lang === 'en' ? '' : lang + '/'}spielzuege`} className="accent-link">
+                {t.see_work} &rarr;
+              </a>
+            </p>
+          </div>
         </div>
       </section>
 
