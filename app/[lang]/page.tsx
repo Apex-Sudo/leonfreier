@@ -34,7 +34,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
       </section>
 
       {/* ═══ Belief ═══ */}
-      <section className="px-6 py-16 md:py-24">
+      <section className="px-6 py-14 md:py-20">
         <div className="max-w-3xl mx-auto">
           <p className="text-[22px] md:text-[28px] font-semibold leading-snug tracking-tight text-foreground/90 max-w-2xl">
             {t.belief_1}
@@ -48,9 +48,8 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
       </section>
 
       {/* ═══ Dark break: the pattern ═══ */}
-      <section className="bg-[#1A1A1A] text-[#FAFAF8] px-6 py-16 md:py-20">
+      <section className="bg-[#1A1A1A] text-[#FAFAF8] px-6 py-14 md:py-16">
         <div className="max-w-3xl mx-auto">
-          <p className="text-[11px] font-medium tracking-widest text-[#B8916A] uppercase mb-6">{t.pattern_label}</p>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[#FAFAF8]/70 max-w-2xl">
             {t.pattern_text}
           </p>
@@ -58,36 +57,42 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
       </section>
 
       {/* ═══ Companies ═══ */}
-      <section className="px-6 py-16 md:py-24">
+      <section className="px-6 py-14 md:py-20">
         <div className="max-w-3xl mx-auto">
-          <div className="space-y-10">
+          <div className="space-y-5">
 
-            <div className="glass-card p-8 transition-all duration-200 hover:border-accent/20">
-              <a href="https://danangbeachvillas.com" target="_blank" rel="noopener noreferrer" className="company-name hover:underline decoration-accent/30 underline-offset-4">
-                Da Nang Beach Villas
-              </a>
-              <p className="text-[13px] text-muted mt-1 mb-3">{t.dnbv_date}</p>
-              <p className="text-[14px] md:text-[15px] leading-relaxed text-foreground/60">
+            <div className="glass-card p-7 transition-all duration-200 hover:border-accent/20">
+              <div className="flex items-baseline justify-between gap-4">
+                <a href="https://danangbeachvillas.com" target="_blank" rel="noopener noreferrer" className="company-name hover:underline decoration-accent/30 underline-offset-4">
+                  Da Nang Beach Villas
+                </a>
+                <span className="text-[12px] text-muted shrink-0">{t.dnbv_date}</span>
+              </div>
+              <p className="text-[14px] leading-relaxed text-foreground/60 mt-2">
                 {t.dnbv_deep}
               </p>
             </div>
 
-            <div className="glass-card p-8 transition-all duration-200 hover:border-accent/20">
-              <a href="https://apexalpha.app" target="_blank" rel="noopener noreferrer" className="company-name hover:underline decoration-accent/30 underline-offset-4">
-                ApexAlpha
-              </a>
-              <p className="text-[13px] text-muted mt-1 mb-3">{t.aa_date}</p>
-              <p className="text-[14px] md:text-[15px] leading-relaxed text-foreground/60">
+            <div className="glass-card p-7 transition-all duration-200 hover:border-accent/20">
+              <div className="flex items-baseline justify-between gap-4">
+                <a href="https://apexalpha.app" target="_blank" rel="noopener noreferrer" className="company-name hover:underline decoration-accent/30 underline-offset-4">
+                  ApexAlpha
+                </a>
+                <span className="text-[12px] text-muted shrink-0">{t.aa_date}</span>
+              </div>
+              <p className="text-[14px] leading-relaxed text-foreground/60 mt-2">
                 {t.aa_deep}
               </p>
             </div>
 
-            <div className="glass-card p-8 transition-all duration-200 hover:border-accent/20">
-              <a href="https://forgehouse.io" target="_blank" rel="noopener noreferrer" className="company-name hover:underline decoration-accent/30 underline-offset-4">
-                ForgeHouse
-              </a>
-              <p className="text-[13px] text-muted mt-1 mb-3">{t.fh_date}</p>
-              <p className="text-[14px] md:text-[15px] leading-relaxed text-foreground/60">
+            <div className="glass-card p-7 transition-all duration-200 hover:border-accent/20">
+              <div className="flex items-baseline justify-between gap-4">
+                <a href="https://forgehouse.io" target="_blank" rel="noopener noreferrer" className="company-name hover:underline decoration-accent/30 underline-offset-4">
+                  ForgeHouse
+                </a>
+                <span className="text-[12px] text-muted shrink-0">{t.fh_date}</span>
+              </div>
+              <p className="text-[14px] leading-relaxed text-foreground/60 mt-2">
                 {t.fh_deep}
               </p>
             </div>
@@ -97,30 +102,22 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
       </section>
 
       {/* ═══ How I Add Value ═══ */}
-      <section className="px-6 pb-16 md:pb-24">
+      <section className="px-6 pb-14 md:pb-20">
         <div className="max-w-3xl mx-auto">
           <div className="border-l-2 border-accent/40 pl-8">
-            <h2 className="text-[11px] font-medium tracking-widest text-muted uppercase mb-5">{t.how_i_add_value}</h2>
-            <div className="space-y-4 text-[15px] md:text-[16px] leading-relaxed text-foreground/75 max-w-xl">
-              <p>{t.value_p1}</p>
-              <p>{t.value_p2}</p>
-              <p>{t.value_p3}</p>
-            </div>
+            <h2 className="text-[11px] font-medium tracking-widest text-muted uppercase mb-4">{t.how_i_add_value}</h2>
+            <p className="text-[15px] md:text-[16px] leading-relaxed text-foreground/75 max-w-xl">
+              {t.value_p1}
+            </p>
+            <a href={`/${lang === 'en' ? '' : lang + '/'}spielzuege`} className="accent-link text-[14px] mt-3 inline-block">
+              {t.see_work} &rarr;
+            </a>
           </div>
         </div>
       </section>
 
-      {/* ═══ Full-width quote ═══ */}
-      <section className="border-y border-border px-6 py-14 md:py-18">
-        <div className="max-w-3xl mx-auto text-center">
-          <p className="text-[18px] md:text-[22px] font-medium italic text-foreground/60 leading-relaxed">
-            &ldquo;{t.quote}&rdquo;
-          </p>
-        </div>
-      </section>
-
       {/* ═══ Writing + Contact ═══ */}
-      <section className="px-6 py-16 md:py-24">
+      <section className="px-6 pb-16 md:pb-24">
         <div className="max-w-3xl mx-auto">
           <div className="glass-card p-8">
             <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-8">
