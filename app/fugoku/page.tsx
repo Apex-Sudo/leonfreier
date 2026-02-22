@@ -22,10 +22,13 @@ export default function FugokuProposal() {
       {/* ═══ Purpose ═══ */}
       <section className="px-6 py-16 md:py-20">
         <div className="max-w-2xl mx-auto">
-          <div className="section-module">
-            <p className="text-[20px] md:text-[22px] font-semibold tracking-tight text-foreground/80">
-              Alignment. Agreement. Execution.
-            </p>
+          <div className="flex items-center justify-center gap-6 md:gap-10">
+            {["Alignment", "Agreement", "Execution"].map((word, i) => (
+              <div key={word} className="flex items-center gap-6 md:gap-10">
+                <span className="text-[20px] md:text-[24px] font-semibold tracking-tight text-foreground/80">{word}</span>
+                {i < 2 && <span className="text-accent/50 text-[20px]">·</span>}
+              </div>
+            ))}
           </div>
         </div>
       </section>
