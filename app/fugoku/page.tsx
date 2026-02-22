@@ -235,16 +235,13 @@ export default function FugokuProposal() {
       <section className="px-6 pt-8 pb-20 md:pb-28">
         <div className="max-w-2xl mx-auto">
           <div className="border-t border-border pt-12">
-            <div className="grid md:grid-cols-2 gap-10">
-              <div></div>
-              <div>
-                <h3 className="text-[11px] font-medium tracking-widest text-muted uppercase mb-4">How This Works</h3>
-                <p className="text-[13px] leading-relaxed text-foreground/50">
-                  I&apos;m a consultant, not a cofounder. You own execution, I own strategy and accountability. 
-                  If cadence breaks down, the engagement pauses. We renegotiate at revenue milestones 
-                  that change the math.
-                </p>
-              </div>
+            <div className="text-center max-w-lg mx-auto">
+              <h3 className="text-[11px] font-medium tracking-widest text-muted uppercase mb-4">How This Works</h3>
+              <p className="text-[13px] leading-relaxed text-foreground/50">
+                I&apos;m a consultant, not a cofounder. You own execution, I own strategy and accountability. 
+                If cadence breaks down, the engagement pauses. We renegotiate at revenue milestones 
+                that change the math.
+              </p>
             </div>
           </div>
         </div>
