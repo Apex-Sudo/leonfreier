@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "GPU Compute Startup — Case Study | Leon Freier",
   description:
-    "How I assessed a pre-revenue GPU compute startup and built the operating system for scale. Then walked away when alignment wasn't there.",
+    "How I repositioned a pre-revenue GPU compute startup from vague B2C play to a staged market penetration strategy. Then walked away when alignment wasn't there.",
 };
 
 export default function GpuComputeCaseStudy() {
@@ -19,9 +19,10 @@ export default function GpuComputeCaseStudy() {
             GPU Compute Startup
           </h1>
           <p className="text-[15px] text-foreground/55 max-w-lg leading-relaxed">
-            GPU compute startup. Pre-revenue, pre-structure. I built the operating
-            system for their go-to-market, then walked away when the fit wasn&apos;t
-            right.
+            Pre-revenue compute company with technical depth and no go-to-market.
+            I redesigned the entire business model, built a 4-stage market
+            penetration strategy, and architected cash flow before a single
+            customer signed. Then walked away when the fit wasn&apos;t right.
           </p>
           <p className="text-[13px] text-muted mt-4">
             February 2026 · Engagement ended amicably
@@ -37,20 +38,19 @@ export default function GpuComputeCaseStudy() {
           </h2>
           <div className="space-y-4 text-[15px] leading-relaxed text-foreground/70">
             <p>
-              The company sells managed GPU infrastructure. The thesis: emerging-market
-              companies need compute but can&apos;t access
-              hyperscaler pricing or navigate the procurement complexity. They
-              broker capacity and wrap it in a managed service.
+              The founder had deep infrastructure knowledge and a clear technical
+              thesis: resell managed GPU compute to companies locked out of
+              hyperscaler pricing. He could build the stack. What he
+              couldn&apos;t see was the path from &ldquo;I have compute&rdquo;
+              to &ldquo;I have a business.&rdquo;
             </p>
             <p>
-              The founder had technical depth and a clear market read. What he
-              didn&apos;t have was a go-to-market structure, pricing validation, or
-              an operating cadence that would survive contact with customers.
-            </p>
-            <p>
-              He&apos;d been building for months. Website up, pitch deck done, some
-              warm leads. But no closed customers, no validated pricing, no
-              systematic way to track whether the business was working.
+              When I came in, the positioning was scattered. Half B2C
+              (&ldquo;the cooler AWS for young people&rdquo;), half B2B, with
+              no clear first customer. Website looked AI-generated. No pricing
+              validation. No discovery calls. No understanding of payment terms
+              with his own supplier. He was about to spend his last money buying
+              infrastructure before talking to a single prospect.
             </p>
           </div>
         </div>
@@ -60,59 +60,100 @@ export default function GpuComputeCaseStudy() {
       <section className="px-6 pb-14 md:pb-20">
         <div className="max-w-2xl mx-auto">
           <h2 className="text-[11px] font-medium tracking-widest text-muted uppercase mb-6">
-            What I Built
+            What I Did
           </h2>
 
           <div className="space-y-8">
             <div className="glass-card p-7">
               <span className="text-accent font-mono text-[13px]">01</span>
               <h3 className="text-[16px] font-semibold mt-2 mb-2">
-                EOS Foundation
+                Killed the B2C Angle
               </h3>
               <p className="text-[14px] leading-relaxed text-foreground/60">
-                Vision/Traction Organizer from scratch. Core values, core focus,
-                10-year target, 3-year picture, 1-year plan, quarterly rocks. The
-                full operating system that turns vision into weekly accountability.
+                Repositioned the entire business from vague &ldquo;cool AWS for
+                Gen Z&rdquo; to a specific, defensible position: B2B
+                infrastructure for emerging markets, starting with Nigeria. One
+                country. One value proposition. Economic nationalism as the
+                wedge: &ldquo;Your data stays in Nigeria.&rdquo;
               </p>
             </div>
 
             <div className="glass-card p-7">
               <span className="text-accent font-mono text-[13px]">02</span>
               <h3 className="text-[16px] font-semibold mt-2 mb-2">
-                GTM Sequencing
+                4-Stage Market Penetration
               </h3>
               <p className="text-[14px] leading-relaxed text-foreground/60">
-                Staged go-to-market: start with managed compute for target-market
-                enterprises (warm network), validate pricing through 5 discovery
-                calls in week 2, then expand or pivot based on signal. Not a
-                12-month roadmap. A 30-day pressure test.
+                Designed a strategy where each stage funds the next. No outside
+                capital needed at any point.
               </p>
+              <div className="mt-4 space-y-3 text-[13px] text-foreground/50">
+                <p>
+                  <span className="text-accent font-medium">Stage 1.</span>{" "}
+                  Resell compute at price parity. Win on nationalism, not price.
+                  Validate with 10 paying customers from warm network.
+                </p>
+                <p>
+                  <span className="text-accent font-medium">Stage 2.</span>{" "}
+                  Managed deployment layer. &ldquo;I push code and it works.&rdquo;
+                  3-5x markup over raw compute. This is where real margin lives.
+                </p>
+                <p>
+                  <span className="text-accent font-medium">Stage 3.</span>{" "}
+                  Identity layer. Emerges naturally from 30-50 companies
+                  authenticating through your stack. You don&apos;t build KYC.
+                  You observe the pattern and unify it. The identity graph
+                  becomes the moat.
+                </p>
+                <p>
+                  <span className="text-accent font-medium">Stage 4.</span>{" "}
+                  App marketplace. Identity and payments solved. Third-party
+                  developers build on the stack because the hard problems are
+                  done. Transaction fees on every API call.
+                </p>
+              </div>
             </div>
 
             <div className="glass-card p-7">
               <span className="text-accent font-mono text-[13px]">03</span>
               <h3 className="text-[16px] font-semibold mt-2 mb-2">
-                Pricing Architecture
+                Cash Flow Architecture
               </h3>
               <p className="text-[14px] leading-relaxed text-foreground/60">
-                Tiered engagement model with cash-equity blend calibrated to the
-                founder&apos;s stage. Lower cash when pre-revenue. Equity that
-                vests monthly. Cliff only at the highest commitment tier. The
-                structure itself becomes a signal: if you can&apos;t commit to the
-                cadence, you can&apos;t commit to the outcome.
+                The founder was about to pay his infrastructure provider upfront.
+                I redesigned the model: charge customers on the 1st, pay the
+                supplier at end of month. Positive float from day one. Then
+                reframed the supplier relationship entirely. The supplier needs
+                demand generators. We are their next market. Negotiate from that
+                position, not as a small buyer begging for credit.
               </p>
             </div>
 
             <div className="glass-card p-7">
               <span className="text-accent font-mono text-[13px]">04</span>
               <h3 className="text-[16px] font-semibold mt-2 mb-2">
-                Deliverable Infrastructure
+                GTM Before Build
               </h3>
               <p className="text-[14px] leading-relaxed text-foreground/60">
-                Custom web-based proposal system. Branded pages for the
-                engagement: scope options, consulting agreement, and an
-                interactive EOS execution document the founder could fill out
-                directly. No PDFs. No back-and-forth. One URL, everything in it.
+                Stopped him from buying infrastructure before talking to a
+                single prospect. Designed a discovery call sequence using his
+                existing network. No cold outreach. Every call ends with
+                &ldquo;Who should I talk to next?&rdquo; so the pipeline
+                generates itself. The Mom Test applied: learn what they need,
+                don&apos;t pitch what you have.
+              </p>
+            </div>
+
+            <div className="glass-card p-7">
+              <span className="text-accent font-mono text-[13px]">05</span>
+              <h3 className="text-[16px] font-semibold mt-2 mb-2">
+                Operating System
+              </h3>
+              <p className="text-[14px] leading-relaxed text-foreground/60">
+                Full EOS implementation: vision, core values, quarterly rocks,
+                weekly accountability. Plus a branded proposal system, consulting
+                agreement, and interactive execution documents. One URL,
+                everything in it.
               </p>
             </div>
           </div>
@@ -131,8 +172,8 @@ export default function GpuComputeCaseStudy() {
                 After the alignment call, it became clear the engagement
                 wouldn&apos;t work. Not because of capability on either side, but
                 because of timing and priorities. The founder needed to resolve
-                upstream questions (funding, technical partnerships) before a
-                strategic consulting layer would deliver value.
+                upstream questions before a strategic consulting layer would
+                deliver value.
               </p>
               <p>
                 I told him directly. We parted on good terms. He wrote a LinkedIn
@@ -141,9 +182,8 @@ export default function GpuComputeCaseStudy() {
               <p>
                 Walking away from revenue when you&apos;re pre-revenue yourself is
                 not comfortable. But taking on an engagement where the
-                prerequisites aren&apos;t met would have burned both parties. The
-                consulting only works when the founder is ready to execute on the
-                output.
+                prerequisites aren&apos;t met burns both parties. The consulting
+                only works when the founder is ready to execute on the output.
               </p>
             </div>
           </div>
@@ -160,20 +200,20 @@ export default function GpuComputeCaseStudy() {
             <div className="space-y-5">
               {[
                 {
-                  label: "Speed to structure",
-                  text: "Full EOS implementation, proposal system, and GTM plan built in days, not months.",
+                  label: "Business model design, not advice",
+                  text: "Repositioned the company, designed the revenue architecture, and sequenced 4 stages of market penetration in a single session.",
+                },
+                {
+                  label: "Supplier as partner, not vendor",
+                  text: "Reframed the infrastructure provider relationship from 'small buyer' to 'demand generator for your next market.' Changes the entire negotiation dynamic.",
+                },
+                {
+                  label: "Revenue before product",
+                  text: "Stopped a founder from spending his last money on infrastructure. Designed GTM that validates demand with zero capital deployed.",
                 },
                 {
                   label: "Honest assessment",
                   text: "The hardest consulting skill is telling a client they're not ready yet. Revenue lost, trust gained.",
-                },
-                {
-                  label: "Reusable infrastructure",
-                  text: "The branded proposal system, consulting agreement, and EOS tooling are now templates for every future engagement.",
-                },
-                {
-                  label: "Stage-appropriate thinking",
-                  text: "Pre-revenue companies don't need 12-month roadmaps. They need 30-day pressure tests with binary outcomes.",
                 },
               ].map((item) => (
                 <div key={item.label} className="flex gap-4">

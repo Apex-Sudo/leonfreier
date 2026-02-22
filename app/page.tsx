@@ -74,19 +74,27 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ═══ How I Help ═══ */}
+      {/* ═══ How I Add Value ═══ */}
       <section className="px-6 pb-16 md:pb-24">
         <div className="max-w-3xl mx-auto">
           <div className="border-l-2 border-accent/40 pl-8">
-            <h2 className="text-[11px] font-medium tracking-widest text-muted uppercase mb-5">How I Help</h2>
-            <p className="text-[15px] md:text-[16px] leading-relaxed text-foreground/75 max-w-xl mb-4">
-              I work with early-stage founders who can build but can&apos;t see the full picture yet.
-              GTM, positioning, business model architecture.
-            </p>
-            <p className="text-[15px] md:text-[16px] leading-relaxed text-foreground/75 max-w-xl">
-              No theory. No borrowed frameworks. Pattern recognition from building across
-              two continents with zero outside capital.
-            </p>
+            <h2 className="text-[11px] font-medium tracking-widest text-muted uppercase mb-5">How I Add Value</h2>
+            <div className="space-y-4 text-[15px] md:text-[16px] leading-relaxed text-foreground/75 max-w-xl">
+              <p>
+                I redesign how early-stage companies make money.
+                Business model architecture, positioning, GTM sequencing, cash flow design.
+              </p>
+              <p>
+                The founder who was about to spend his last money on infrastructure
+                before talking to a single customer. I stopped that. Repositioned the
+                entire company, designed a 4-stage market penetration strategy where
+                each stage funds the next, and reframed his supplier from vendor to
+                partner. Zero capital needed.
+              </p>
+              <p>
+                That&apos;s the work. Not advice. Architecture.
+              </p>
+            </div>
           </div>
         </div>
       </section>
