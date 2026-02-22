@@ -32,8 +32,7 @@ export default function Home() {
       <section className="px-6 py-16 md:py-24">
         <div className="max-w-3xl mx-auto">
           <p className="text-[15px] md:text-[16px] leading-relaxed text-foreground/70 mb-10">
-            Every company I&apos;ve built started the same way.
-            I saw something missing and couldn&apos;t stop thinking about it.
+            I&apos;ve never separated work from play. Building companies is how I express myself, the way some people write music or paint. Three companies, two continents, zero outside capital. Every one started with something I couldn&apos;t leave alone.
           </p>
 
           <div className="space-y-5">
