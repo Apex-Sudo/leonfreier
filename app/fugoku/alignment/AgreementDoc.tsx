@@ -268,15 +268,26 @@ export default function AgreementDoc() {
             </div>
           </div>
 
-          {/* Agreement CTA */}
-          <div className="print-hide mt-20 text-center">
-            <button
-              onClick={handleExportPDF}
-              className="inline-block text-[15px] font-medium px-8 py-3.5 rounded-xl bg-accent text-white hover:bg-accent-dark transition-colors duration-200"
-            >
-              Agreement
-            </button>
-            <p className="text-[13px] text-foreground/35 mt-4">Download as PDF.</p>
+          {/* CTAs */}
+          <div className="print-hide mt-20 text-center space-y-4">
+            <div>
+              <button
+                onClick={handleExportPDF}
+                className="inline-block text-[15px] font-medium px-8 py-3.5 rounded-xl bg-accent text-white hover:bg-accent-dark transition-colors duration-200"
+              >
+                Agreement
+              </button>
+              <p className="text-[13px] text-foreground/35 mt-3">Download as PDF.</p>
+            </div>
+            <div className="pt-4">
+              <a
+                href="/fugoku/execution"
+                className="inline-block text-[15px] font-medium px-8 py-3.5 rounded-xl border border-accent/30 text-accent hover:bg-accent/[0.05] transition-colors duration-200"
+              >
+                Execution
+              </a>
+              <p className="text-[13px] text-foreground/35 mt-3">EOS foundation homework.</p>
+            </div>
           </div>
 
           {/* Footer */}
