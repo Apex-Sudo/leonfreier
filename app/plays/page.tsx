@@ -24,6 +24,14 @@ export default function PlaysPage() {
             </p>
             <span className="text-accent text-[13px] mt-4 inline-block">Read case &rarr;</span>
           </a>
+
+          <a href="/plays/fugoku" className="glass-card p-8 block transition-all duration-200 hover:border-accent/20">
+            <h2 className="company-name">Fugoku Cloud</h2>
+            <p className="text-[14px] md:text-[15px] leading-relaxed text-foreground/60 mt-2">
+              GPU compute startup. Built the operating system for scale, then walked away when alignment wasn&apos;t there.
+            </p>
+            <span className="text-accent text-[13px] mt-4 inline-block">Read case &rarr;</span>
+          </a>
         </div>
       </section>
     </main>
