@@ -20,7 +20,10 @@ export default function PlaysPage() {
           <a href="/plays/forgehouse" className="glass-card p-8 block transition-all duration-200 hover:border-accent/20">
             <h2 className="company-name">ForgeHouse</h2>
             <p className="text-[14px] md:text-[15px] leading-relaxed text-foreground/60 mt-2">
-              From concept to live product in 3 hours. AI-powered mentorship marketplace.
+              Most mentorship platforms sell access to a calendar. ForgeHouse trains AI agents on a mentor&apos;s actual frameworks, then lets anyone access that thinking on demand.
+            </p>
+            <p className="text-[14px] md:text-[15px] leading-relaxed text-foreground/60 mt-2">
+              Category, positioning, product, and live deployment in a single session. The agent went live the same day.
             </p>
             <span className="text-accent text-[13px] mt-4 inline-block">Read case &rarr;</span>
           </a>
@@ -28,7 +31,10 @@ export default function PlaysPage() {
           <a href="/plays/fugoku" className="glass-card p-8 block transition-all duration-200 hover:border-accent/20">
             <h2 className="company-name">Fugoku Cloud</h2>
             <p className="text-[14px] md:text-[15px] leading-relaxed text-foreground/60 mt-2">
-              GPU compute startup. Built the operating system for scale, then walked away when alignment wasn&apos;t there.
+              Pre-revenue GPU compute startup selling managed infrastructure to emerging markets. No operating system, no validated pricing, no GTM sequence. Just a founder with technical depth and warm leads going cold.
+            </p>
+            <p className="text-[14px] md:text-[15px] leading-relaxed text-foreground/60 mt-2">
+              Built the full EOS foundation, staged go-to-market, and pricing architecture. Then told the founder he wasn&apos;t ready yet and walked away from the revenue. He wrote a recommendation the same week.
             </p>
             <span className="text-accent text-[13px] mt-4 inline-block">Read case &rarr;</span>
           </a>
