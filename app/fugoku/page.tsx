@@ -221,7 +221,7 @@ export default function FugokuProposal() {
           >
             Alignment
           </a>
-          <p className="text-[13px] text-foreground/35 mt-4">Takes 20 minutes. Worth every one.</p>
+          {/* */}
         </div>
       </section>
 
