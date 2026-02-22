@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Fugoku Cloud — Case Study | Leon Freier",
+  title: "GPU Compute Startup — Case Study | Leon Freier",
   description:
     "How I assessed a pre-revenue GPU compute startup and built the operating system for scale. Then walked away when alignment wasn't there.",
 };
 
-export default function FugokuCaseStudy() {
+export default function GpuComputeCaseStudy() {
   return (
     <main className="min-h-screen pt-14">
       {/* ═══ Hero ═══ */}
@@ -16,7 +16,7 @@ export default function FugokuCaseStudy() {
             Case Study
           </p>
           <h1 className="text-3xl md:text-4xl font-semibold tracking-tight mb-4">
-            Fugoku Cloud
+            GPU Compute Startup
           </h1>
           <p className="text-[15px] text-foreground/55 max-w-lg leading-relaxed">
             GPU compute startup. Pre-revenue, pre-structure. I built the operating
@@ -37,10 +37,10 @@ export default function FugokuCaseStudy() {
           </h2>
           <div className="space-y-4 text-[15px] leading-relaxed text-foreground/70">
             <p>
-              Fugoku Cloud sells managed GPU infrastructure. Their thesis: African
-              and emerging-market companies need compute but can&apos;t access
-              hyperscaler pricing or navigate the procurement complexity. Fugoku
-              brokers capacity and wraps it in a managed service.
+              The company sells managed GPU infrastructure. The thesis: emerging-market
+              companies need compute but can&apos;t access
+              hyperscaler pricing or navigate the procurement complexity. They
+              broker capacity and wrap it in a managed service.
             </p>
             <p>
               The founder had technical depth and a clear market read. What he
@@ -82,7 +82,7 @@ export default function FugokuCaseStudy() {
                 GTM Sequencing
               </h3>
               <p className="text-[14px] leading-relaxed text-foreground/60">
-                Staged go-to-market: start with managed compute for Nigerian
+                Staged go-to-market: start with managed compute for target-market
                 enterprises (warm network), validate pricing through 5 discovery
                 calls in week 2, then expand or pivot based on signal. Not a
                 12-month roadmap. A 30-day pressure test.

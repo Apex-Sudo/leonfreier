@@ -28,10 +28,10 @@ export default function PlaysPage() {
             <span className="text-accent text-[13px] mt-4 inline-block">Read case &rarr;</span>
           </a>
 
-          <a href="/plays/fugoku" className="glass-card p-8 block transition-all duration-200 hover:border-accent/20">
-            <h2 className="company-name">Fugoku Cloud</h2>
+          <a href="/plays/gpu-compute" className="glass-card p-8 block transition-all duration-200 hover:border-accent/20">
+            <h2 className="company-name">GPU Compute Startup</h2>
             <p className="text-[14px] md:text-[15px] leading-relaxed text-foreground/60 mt-2">
-              Pre-revenue GPU compute startup selling managed infrastructure to emerging markets. No operating system, no validated pricing, no GTM sequence. Just a founder with technical depth and warm leads going cold.
+              Pre-revenue infrastructure company selling managed compute to emerging markets. No operating system, no validated pricing, no GTM sequence. Just a founder with technical depth and warm leads going cold.
             </p>
             <p className="text-[14px] md:text-[15px] leading-relaxed text-foreground/60 mt-2">
               Built the full EOS foundation, staged go-to-market, and pricing architecture. Then told the founder he wasn&apos;t ready yet and walked away from the revenue. He wrote a recommendation the same week.
