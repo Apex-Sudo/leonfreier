@@ -222,6 +222,19 @@ export default function FugokuProposal() {
         </div>
       </section>
 
+      {/* ═══ CTA ═══ */}
+      <section className="px-6 pb-16">
+        <div className="max-w-4xl mx-auto text-center">
+          <a 
+            href="/fugoku/begin" 
+            className="inline-block text-[15px] font-medium px-8 py-3.5 rounded-xl bg-accent text-white hover:bg-accent-dark transition-colors duration-200"
+          >
+            Let&apos;s begin &rarr;
+          </a>
+          <p className="text-[13px] text-foreground/35 mt-4">Takes 20 minutes. Worth every one.</p>
+        </div>
+      </section>
+
       {/* ═══ Fine Print: Case Study + Principles ═══ */}
       <section className="px-6 pt-8 pb-20 md:pb-28">
         <div className="max-w-2xl mx-auto">
