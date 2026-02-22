@@ -37,6 +37,21 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body className="bg-[#FAFAFA] text-[#1A1A1A] font-['Inter'] antialiased">
+        <nav className="fixed top-0 left-0 right-0 z-50 bg-[#FAFAFA]/80 backdrop-blur-md border-b border-black/[0.04]">
+          <div className="max-w-3xl mx-auto px-6 h-14 flex items-center justify-between">
+            <a href="/" className="text-[15px] font-semibold tracking-tight hover:opacity-70 transition-opacity">
+              Leon Freier
+            </a>
+            <div className="flex items-center gap-6">
+              <a href="/cases" className="text-[13px] text-foreground/60 hover:text-foreground transition-colors">
+                Cases
+              </a>
+              <a href="mailto:leon@maxresult.ai" className="text-[13px] text-foreground/60 hover:text-foreground transition-colors">
+                Contact
+              </a>
+            </div>
+          </div>
+        </nav>
         {children}
       </body>
     </html>
