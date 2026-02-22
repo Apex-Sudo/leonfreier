@@ -41,16 +41,13 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
             <br />
             {t.belief_2}
           </p>
-          <p className="text-[15px] leading-relaxed text-foreground/50 mt-6 max-w-xl">
-            {t.belief_p}
-          </p>
         </div>
       </section>
 
-      {/* ═══ Dark break: the pattern ═══ */}
-      <section className="bg-[#1A1A1A] text-[#FAFAF8] px-6 py-14 md:py-16">
+      {/* ═══ Dark break ═══ */}
+      <section className="bg-[#1A1A1A] text-[#FAFAF8] px-6 py-12 md:py-14">
         <div className="max-w-3xl mx-auto">
-          <p className="text-[17px] md:text-[19px] leading-relaxed text-[#FAFAF8]/70 max-w-2xl">
+          <p className="text-[17px] md:text-[19px] font-medium text-[#FAFAF8]/70">
             {t.pattern_text}
           </p>
         </div>
@@ -101,18 +98,15 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
         </div>
       </section>
 
-      {/* ═══ How I Add Value ═══ */}
+      {/* ═══ Value + link ═══ */}
       <section className="px-6 pb-14 md:pb-20">
         <div className="max-w-3xl mx-auto">
-          <div className="border-l-2 border-accent/40 pl-8">
-            <h2 className="text-[11px] font-medium tracking-widest text-muted uppercase mb-4">{t.how_i_add_value}</h2>
-            <p className="text-[15px] md:text-[16px] leading-relaxed text-foreground/75 max-w-xl">
-              {t.value_p1}
-            </p>
-            <a href={`/${lang === 'en' ? '' : lang + '/'}spielzuege`} className="accent-link text-[14px] mt-3 inline-block">
+          <p className="text-[14px] text-foreground/50">
+            {t.value_p1}{" "}
+            <a href={`/${lang === 'en' ? '' : lang + '/'}spielzuege`} className="accent-link">
               {t.see_work} &rarr;
             </a>
-          </div>
+          </p>
         </div>
       </section>
 
