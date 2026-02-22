@@ -16,7 +16,7 @@ export default function ForgeHouseCase() {
     <main className="min-h-screen">
 
       {/* ═══ Hero ═══ */}
-      <section className="gradient-hero px-6 pt-24 pb-16 md:pt-36 md:pb-24">
+      <section className="gradient-hero px-6 pt-24 pb-16 md:pt-36 md:pb-24 mt-14">
         <div className="max-w-2xl mx-auto">
           <p className="text-[11px] font-medium tracking-widest text-accent uppercase mb-6">Case Study</p>
           <h1 className="text-4xl md:text-5xl font-semibold tracking-tight mb-4">ForgeHouse</h1>
@@ -194,9 +194,12 @@ export default function ForgeHouseCase() {
 
       {/* ═══ CTA ═══ */}
       <section className="px-6 pb-16">
-        <div className="max-w-2xl mx-auto text-center">
-          <a href="https://forgehouse.io" target="_blank" rel="noopener noreferrer" className="accent-link text-[15px]">
+        <div className="max-w-2xl mx-auto text-center space-y-4">
+          <a href="https://forgehouse.io" target="_blank" rel="noopener noreferrer" className="accent-link text-[15px] block">
             See it live at forgehouse.io &rarr;
+          </a>
+          <a href="https://www.indiehackers.com/post/i-built-an-agentic-mentor-marketplace-this-morning-first-mentor-is-extracting-right-now-a1599c1536" target="_blank" rel="noopener noreferrer" className="accent-link text-[15px] block">
+            Read the launch post on Indie Hackers &rarr;
           </a>
         </div>
       </section>
