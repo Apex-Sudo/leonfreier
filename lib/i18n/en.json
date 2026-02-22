@@ -18,7 +18,19 @@
     "value_p3": "That's the work. Not advice. Architecture.",
     "writing": "Writing",
     "contact": "Contact",
-    "footer": "Hamburg. Da Nang. Wherever the work is."
+    "footer": "Hamburg. Da Nang. Wherever the work is.",
+    "belief_1": "Most founders raise money to buy time.",
+    "belief_2": "I think that's the trap.",
+    "belief_p": "Capital creates dependency. Dependency creates misalignment. Every company I've built was funded by the one before it, or by nothing at all. The constraint is the strategy.",
+    "pattern_label": "The Pattern",
+    "pattern_text": "Find the gap nobody is talking about. Build the thing that should exist. Own the whole stack. If the market isn't ready, condition it. If the timing is wrong, wait. If the fit isn't there, walk away.",
+    "dnbv_date": "2016 – present · Vietnam",
+    "aa_date": "2025 – present · Delaware, USA",
+    "fh_date": "2026 – present",
+    "dnbv_deep": "I wanted to live in Vietnam. There was no playbook for running beachfront villas remotely from Germany. So I wrote one. 15 properties, 374 reviews, a direct booking engine that competes with Airbnb. Built the team, the ops, the tech. Never moved there full-time. The system doesn't need me to.",
+    "aa_deep": "Every pricing tool in vacation rentals tells you what to charge. None of them tell you who you're charging, or whether your rate matches their willingness to pay. That's a blind spot. I'm building the demand visibility layer that fills it. The category didn't exist. Now it does.",
+    "fh_deep": "25 years of expertise locked behind a calendar link. One mentor, one hour, one person helped. That math never scales. AI agents trained on real frameworks change the ratio. The mentor's craft reaches thousands. The mentor keeps ownership. Nobody gets diluted.",
+    "quote": "The best time to build is when nobody believes the category exists yet."
   },
   "spielzuege_index": {
     "title": "Spielzüge",

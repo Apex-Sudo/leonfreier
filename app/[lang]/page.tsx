@@ -33,20 +33,42 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
         </div>
       </section>
 
-      {/* ═══ The Thread ═══ */}
+      {/* ═══ Belief ═══ */}
       <section className="px-6 py-16 md:py-24">
         <div className="max-w-3xl mx-auto">
-          <p className="text-[15px] md:text-[16px] leading-relaxed text-foreground/70 mb-10">
-            {t.thread}
+          <p className="text-[22px] md:text-[28px] font-semibold leading-snug tracking-tight text-foreground/90 max-w-2xl">
+            {t.belief_1}
+            <br />
+            {t.belief_2}
           </p>
+          <p className="text-[15px] leading-relaxed text-foreground/50 mt-6 max-w-xl">
+            {t.belief_p}
+          </p>
+        </div>
+      </section>
 
-          <div className="space-y-5">
+      {/* ═══ Dark break: the pattern ═══ */}
+      <section className="bg-[#1A1A1A] text-[#FAFAF8] px-6 py-16 md:py-20">
+        <div className="max-w-3xl mx-auto">
+          <p className="text-[11px] font-medium tracking-widest text-[#B8916A] uppercase mb-6">{t.pattern_label}</p>
+          <p className="text-[17px] md:text-[19px] leading-relaxed text-[#FAFAF8]/70 max-w-2xl">
+            {t.pattern_text}
+          </p>
+        </div>
+      </section>
+
+      {/* ═══ Companies ═══ */}
+      <section className="px-6 py-16 md:py-24">
+        <div className="max-w-3xl mx-auto">
+          <div className="space-y-10">
+
             <div className="glass-card p-8 transition-all duration-200 hover:border-accent/20">
               <a href="https://danangbeachvillas.com" target="_blank" rel="noopener noreferrer" className="company-name hover:underline decoration-accent/30 underline-offset-4">
                 Da Nang Beach Villas
               </a>
-              <p className="text-[14px] md:text-[15px] leading-relaxed text-foreground/60 mt-2">
-                {t.dnbv_desc}
+              <p className="text-[13px] text-muted mt-1 mb-3">{t.dnbv_date}</p>
+              <p className="text-[14px] md:text-[15px] leading-relaxed text-foreground/60">
+                {t.dnbv_deep}
               </p>
             </div>
 
@@ -54,8 +76,9 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
               <a href="https://apexalpha.app" target="_blank" rel="noopener noreferrer" className="company-name hover:underline decoration-accent/30 underline-offset-4">
                 ApexAlpha
               </a>
-              <p className="text-[14px] md:text-[15px] leading-relaxed text-foreground/60 mt-2">
-                {t.apexalpha_desc}
+              <p className="text-[13px] text-muted mt-1 mb-3">{t.aa_date}</p>
+              <p className="text-[14px] md:text-[15px] leading-relaxed text-foreground/60">
+                {t.aa_deep}
               </p>
             </div>
 
@@ -63,15 +86,13 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
               <a href="https://forgehouse.io" target="_blank" rel="noopener noreferrer" className="company-name hover:underline decoration-accent/30 underline-offset-4">
                 ForgeHouse
               </a>
-              <p className="text-[14px] md:text-[15px] leading-relaxed text-foreground/60 mt-2">
-                {t.forgehouse_desc}
+              <p className="text-[13px] text-muted mt-1 mb-3">{t.fh_date}</p>
+              <p className="text-[14px] md:text-[15px] leading-relaxed text-foreground/60">
+                {t.fh_deep}
               </p>
             </div>
-          </div>
 
-          <p className="text-[14px] leading-relaxed text-foreground/40 mt-10">
-            {t.pattern}
-          </p>
+          </div>
         </div>
       </section>
 
@@ -89,8 +110,17 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
         </div>
       </section>
 
+      {/* ═══ Full-width quote ═══ */}
+      <section className="border-y border-border px-6 py-14 md:py-18">
+        <div className="max-w-3xl mx-auto text-center">
+          <p className="text-[18px] md:text-[22px] font-medium italic text-foreground/60 leading-relaxed">
+            &ldquo;{t.quote}&rdquo;
+          </p>
+        </div>
+      </section>
+
       {/* ═══ Writing + Contact ═══ */}
-      <section className="px-6 pb-16 md:pb-24">
+      <section className="px-6 py-16 md:py-24">
         <div className="max-w-3xl mx-auto">
           <div className="glass-card p-8">
             <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-8">
