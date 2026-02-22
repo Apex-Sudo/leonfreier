@@ -3,7 +3,7 @@
 import { useState, useEffect, type ReactNode } from "react";
 
 const PASS_KEY = "fugoku_auth";
-const CORRECT_PASS = "fugoku2026";
+const CORRECT_PASS = "fG9k$xR7";
 
 export default function FugokuLayout({ children }: { children: ReactNode }) {
   const [authed, setAuthed] = useState(false);
