@@ -142,7 +142,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
       {/* ═══ Footer ═══ */}
       <footer className="px-6 pt-6 pb-10">
         <div className="max-w-3xl mx-auto border-t border-border pt-6">
-          <p className="text-[13px] text-muted/50">{t.footer}</p>
+          <p className="text-[13px] text-muted">{t.footer}</p>
         </div>
       </footer>
 

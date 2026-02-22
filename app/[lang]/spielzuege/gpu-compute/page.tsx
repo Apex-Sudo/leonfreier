@@ -51,7 +51,7 @@ export default async function GpuComputeCaseStudy({ params }: { params: Promise<
             {t.what_i_did}
           </h2>
 
-          <div className="space-y-8">
+          <div className="space-y-5">
             <div className="glass-card p-7">
               <span className="text-accent font-mono text-[13px]">01</span>
               <h3 className="text-[16px] font-semibold mt-2 mb-2">{t.step1_title}</h3>

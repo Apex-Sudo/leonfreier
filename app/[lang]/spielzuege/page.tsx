@@ -40,6 +40,17 @@ export default async function SpielzuegePage({ params }: { params: Promise<{ lan
           </a>
         </div>
       </section>
+
+      <footer className="px-6 pt-8 pb-12">
+        <div className="max-w-3xl mx-auto border-t border-border pt-8 flex justify-between items-center">
+          <a href={prefix || '/'} className="accent-link text-[13px]">
+            &larr; leonfreier.com
+          </a>
+          <a href="mailto:leon@maxresult.ai" className="accent-link text-[13px]">
+            leon@maxresult.ai
+          </a>
+        </div>
+      </footer>
     </main>
   );
 }
