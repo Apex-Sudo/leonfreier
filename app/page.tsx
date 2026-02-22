@@ -18,7 +18,7 @@ export default function Home() {
             />
             <div>
               <h1 className="text-3xl md:text-5xl font-semibold tracking-tight mb-3">Leon Freier</h1>
-              <p className="text-accent font-medium text-[14px] tracking-wide mb-4">Strategy.</p>
+              <p className="text-accent font-medium text-[14px] tracking-wide mb-4">Alignment. Agreement. Execution.</p>
               <p className="text-[15px] md:text-[17px] leading-relaxed text-foreground/75 max-w-lg">
                 I build things from zero. Three companies, two continents, no outside capital.
               </p>
