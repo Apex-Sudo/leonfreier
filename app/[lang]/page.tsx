@@ -1,6 +1,11 @@
 import Image from "next/image";
+import { getDictionary, type Locale } from '@/lib/i18n';
 
-export default function Home() {
+export default async function Home({ params }: { params: Promise<{ lang: string }> }) {
+  const { lang } = await params;
+  const dict = getDictionary(lang as Locale);
+  const t = dict.home;
+
   return (
     <main className="min-h-screen">
 
@@ -18,11 +23,11 @@ export default function Home() {
             />
             <div>
               <h1 className="text-3xl md:text-5xl font-semibold tracking-tight mb-3">Leon Freier</h1>
-              <p className="text-accent font-medium text-[14px] tracking-wide mb-4">Alignment. Agreement. Execution.</p>
+              <p className="text-accent font-medium text-[14px] tracking-wide mb-4">{t.tagline}</p>
               <p className="text-[15px] md:text-[17px] leading-relaxed text-foreground/75 max-w-lg">
-                Three companies, two continents, no outside capital.
+                {t.intro}
               </p>
-              <p className="text-muted text-[13px] mt-4">Hamburg, Germany</p>
+              <p className="text-muted text-[13px] mt-4">{t.location}</p>
             </div>
           </div>
         </div>
@@ -32,7 +37,7 @@ export default function Home() {
       <section className="px-6 py-16 md:py-24">
         <div className="max-w-3xl mx-auto">
           <p className="text-[15px] md:text-[16px] leading-relaxed text-foreground/70 mb-10">
-            I&apos;ve never separated work from play. Building companies is how I express myself, the way some people write music or paint. Three companies, two continents, zero outside capital. Every one started with something I couldn&apos;t leave alone.
+            {t.thread}
           </p>
 
           <div className="space-y-5">
@@ -41,8 +46,7 @@ export default function Home() {
                 Da Nang Beach Villas
               </a>
               <p className="text-[14px] md:text-[15px] leading-relaxed text-foreground/60 mt-2">
-                10 years running beachfront villas in Vietnam. 15 properties, 374 guest reviews.
-                Built the team, the operations, the direct booking site. All from Hamburg.
+                {t.dnbv_desc}
               </p>
             </div>
 
@@ -51,9 +55,7 @@ export default function Home() {
                 ApexAlpha
               </a>
               <p className="text-[14px] md:text-[15px] leading-relaxed text-foreground/60 mt-2">
-                Vacation rental operators are flying blind to who&apos;s browsing their site and
-                what those visitors would actually pay. I&apos;m building the intelligence layer
-                that makes demand visible.
+                {t.apexalpha_desc}
               </p>
             </div>
 
@@ -62,14 +64,13 @@ export default function Home() {
                 ForgeHouse
               </a>
               <p className="text-[14px] md:text-[15px] leading-relaxed text-foreground/60 mt-2">
-                Mentorship shouldn&apos;t require a calendar invite. AI agents trained on
-                real expertise, available the moment you need them.
+                {t.forgehouse_desc}
               </p>
             </div>
           </div>
 
           <p className="text-[14px] leading-relaxed text-foreground/40 mt-10">
-            The pattern: find the gap, build what should exist, own the whole stack.
+            {t.pattern}
           </p>
         </div>
       </section>
@@ -78,22 +79,11 @@ export default function Home() {
       <section className="px-6 pb-16 md:pb-24">
         <div className="max-w-3xl mx-auto">
           <div className="border-l-2 border-accent/40 pl-8">
-            <h2 className="text-[11px] font-medium tracking-widest text-muted uppercase mb-5">How I Add Value</h2>
+            <h2 className="text-[11px] font-medium tracking-widest text-muted uppercase mb-5">{t.how_i_add_value}</h2>
             <div className="space-y-4 text-[15px] md:text-[16px] leading-relaxed text-foreground/75 max-w-xl">
-              <p>
-                I redesign how early-stage companies make money.
-                Business model architecture, positioning, GTM sequencing, cash flow design.
-              </p>
-              <p>
-                The founder who was about to spend his last money on infrastructure
-                before talking to a single customer. I stopped that. Repositioned the
-                entire company, designed a 4-stage market penetration strategy where
-                each stage funds the next, and reframed his supplier from vendor to
-                partner. Zero capital needed.
-              </p>
-              <p>
-                That&apos;s the work. Not advice. Architecture.
-              </p>
+              <p>{t.value_p1}</p>
+              <p>{t.value_p2}</p>
+              <p>{t.value_p3}</p>
             </div>
           </div>
         </div>
@@ -105,7 +95,7 @@ export default function Home() {
           <div className="glass-card p-8">
             <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-8">
               <div>
-                <h2 className="text-[11px] font-medium tracking-widest text-muted uppercase mb-4">Writing</h2>
+                <h2 className="text-[11px] font-medium tracking-widest text-muted uppercase mb-4">{t.writing}</h2>
                 <div className="flex gap-6">
                   <a href="https://www.linkedin.com/in/leonfreier/" target="_blank" rel="noopener noreferrer" className="accent-link text-[15px]">
                     LinkedIn &rarr;
@@ -116,7 +106,7 @@ export default function Home() {
                 </div>
               </div>
               <div>
-                <h2 className="text-[11px] font-medium tracking-widest text-muted uppercase mb-4">Contact</h2>
+                <h2 className="text-[11px] font-medium tracking-widest text-muted uppercase mb-4">{t.contact}</h2>
                 <div className="flex gap-6">
                   <a href="mailto:leon@maxresult.ai" className="accent-link text-[15px]">
                     leon@maxresult.ai
@@ -134,7 +124,7 @@ export default function Home() {
       {/* ═══ Footer ═══ */}
       <footer className="px-6 pt-8 pb-12">
         <div className="max-w-3xl mx-auto border-t border-border pt-8">
-          <p className="text-[13px] text-muted/50">Hamburg. Da Nang. Wherever the work is.</p>
+          <p className="text-[13px] text-muted/50">{t.footer}</p>
         </div>
       </footer>
 
