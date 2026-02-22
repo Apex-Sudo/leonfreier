@@ -133,6 +133,14 @@ export default function AgreementDoc() {
           @page {
             margin: 1.5cm 2cm;
           }
+          .sig-block {
+            break-inside: avoid !important;
+            page-break-inside: avoid !important;
+          }
+          .print-page section, .print-page > div > div {
+            break-inside: avoid;
+            page-break-inside: avoid;
+          }
         }
       `}</style>
 
@@ -235,33 +243,33 @@ export default function AgreementDoc() {
           ))}
 
           {/* Signatures */}
-          <div className="mt-20 pt-16 border-t border-border/50">
+          <div className="mt-20 pt-16 border-t border-border/50" style={{ breakInside: "avoid", pageBreakInside: "avoid" }}>
             <div className="grid md:grid-cols-2 gap-16">
               <div>
                 <p className="text-[11px] font-medium tracking-[0.2em] text-accent/70 uppercase mb-6">Consultant</p>
-                <p className="text-[15px] font-medium text-foreground/90 mb-8">Leon Freier</p>
-                <div className="space-y-6">
+                <p className="text-[15px] font-medium text-foreground/90 mb-5">Leon Freier</p>
+                <div className="space-y-4">
                   <div>
-                    <p className="text-[11px] text-foreground/30 mb-2">Signature</p>
-                    <div className="border-b border-foreground/15 w-full h-8" />
+                    <p className="text-[11px] text-foreground/30 mb-1">Signature</p>
+                    <div className="border-b border-foreground/15 w-full h-6" />
                   </div>
                   <div>
-                    <p className="text-[11px] text-foreground/30 mb-2">Date</p>
-                    <div className="border-b border-foreground/15 w-full h-8" />
+                    <p className="text-[11px] text-foreground/30 mb-1">Date</p>
+                    <div className="border-b border-foreground/15 w-full h-6" />
                   </div>
                 </div>
               </div>
               <div>
-                <p className="text-[11px] font-medium tracking-[0.2em] text-accent/70 uppercase mb-6">Company</p>
-                <p className="text-[15px] font-medium text-foreground/90 mb-8">Richard Okonicha</p>
-                <div className="space-y-6">
+                <p className="text-[11px] font-medium tracking-[0.2em] text-accent/70 uppercase mb-4">Company</p>
+                <p className="text-[15px] font-medium text-foreground/90 mb-5">Richard Okonicha</p>
+                <div className="space-y-4">
                   <div>
-                    <p className="text-[11px] text-foreground/30 mb-2">Signature</p>
-                    <div className="border-b border-foreground/15 w-full h-8" />
+                    <p className="text-[11px] text-foreground/30 mb-1">Signature</p>
+                    <div className="border-b border-foreground/15 w-full h-6" />
                   </div>
                   <div>
-                    <p className="text-[11px] text-foreground/30 mb-2">Date</p>
-                    <div className="border-b border-foreground/15 w-full h-8" />
+                    <p className="text-[11px] text-foreground/30 mb-1">Date</p>
+                    <div className="border-b border-foreground/15 w-full h-6" />
                   </div>
                 </div>
               </div>
