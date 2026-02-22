@@ -252,8 +252,8 @@ export default function GpuComputeCaseStudy() {
       {/* ═══ Footer ═══ */}
       <footer className="px-6 pt-10 pb-10">
         <div className="max-w-2xl mx-auto border-t border-border pt-8 flex justify-between items-center">
-          <a href="/plays" className="accent-link text-[13px]">
-            &larr; All plays
+          <a href="/spielzuege" className="accent-link text-[13px]">
+            &larr; Alle Spielzüge
           </a>
           <a
             href="mailto:leon@maxresult.ai"

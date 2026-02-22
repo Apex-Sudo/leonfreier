@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "ForgeHouse — Case Study | Leon Freier",
     description: "From concept to live product in 3 hours.",
-    url: "https://leonfreier.com/plays/forgehouse",
+    url: "https://leonfreier.com/spielzuege/forgehouse",
     type: "article",
   },
 };
