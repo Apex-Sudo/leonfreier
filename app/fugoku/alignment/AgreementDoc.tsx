@@ -137,20 +137,7 @@ export default function AgreementDoc() {
       `}</style>
 
       <main className="min-h-screen">
-        {/* Export button */}
-        <div className="print-hide fixed bottom-8 right-8 z-50">
-          <button
-            onClick={handleExportPDF}
-            className="bg-accent text-white px-6 py-3 rounded-xl font-medium text-[14px] hover:bg-accent-dark transition-colors shadow-lg flex items-center gap-2"
-          >
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-              <polyline points="7 10 12 15 17 10" />
-              <line x1="12" y1="15" x2="12" y2="3" />
-            </svg>
-            Export PDF
-          </button>
-        </div>
+        {/* spacer */}
 
         {/* Document */}
         <div className="print-page max-w-2xl mx-auto px-6 pt-24 pb-20 md:pt-36">
@@ -279,6 +266,17 @@ export default function AgreementDoc() {
                 </div>
               </div>
             </div>
+          </div>
+
+          {/* Agreement CTA */}
+          <div className="print-hide mt-20 text-center">
+            <button
+              onClick={handleExportPDF}
+              className="inline-block text-[15px] font-medium px-8 py-3.5 rounded-xl bg-accent text-white hover:bg-accent-dark transition-colors duration-200"
+            >
+              Agreement
+            </button>
+            <p className="text-[13px] text-foreground/35 mt-4">Download as PDF.</p>
           </div>
 
           {/* Footer */}
