@@ -227,10 +227,10 @@ export default function FugokuProposal() {
       <section className="px-6 pb-16">
         <div className="max-w-4xl mx-auto text-center">
           <a 
-            href="/fugoku/begin" 
+            href="/fugoku/alignment" 
             className="inline-block text-[15px] font-medium px-8 py-3.5 rounded-xl bg-accent text-white hover:bg-accent-dark transition-colors duration-200"
           >
-            Let&apos;s begin &rarr;
+            Alignment
           </a>
           <p className="text-[13px] text-foreground/35 mt-4">Takes 20 minutes. Worth every one.</p>
         </div>
