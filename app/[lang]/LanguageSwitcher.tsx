@@ -6,9 +6,10 @@ const labels: Record<string, string> = {
   en: 'EN',
   vi: 'VI',
   zh: '中文',
+  ru: 'RU',
 };
 
-const locales = ['en', 'vi', 'zh'] as const;
+const locales = ['en', 'vi', 'zh', 'ru'] as const;
 
 export default function LanguageSwitcher({ currentLocale }: { currentLocale: string }) {
   const pathname = usePathname();
