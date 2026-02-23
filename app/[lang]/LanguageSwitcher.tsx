@@ -15,10 +15,10 @@ export default function LanguageSwitcher({ currentLocale }: { currentLocale: str
   const pathname = usePathname();
 
   function getLocalePath(locale: string) {
-    // Strip current locale prefix from pathname
+    // Strip any locale prefix from pathname
     let path = pathname;
     for (const l of locales) {
-      if (l !== 'en' && (path.startsWith(`/${l}/`) || path === `/${l}`)) {
+      if (path.startsWith(`/${l}/`) || path === `/${l}`) {
         path = path.slice(l.length + 1) || '/';
         break;
       }
