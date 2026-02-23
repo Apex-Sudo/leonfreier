@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Leon Freier",
-  description: "I build things from zero. Three companies, two continents, no outside capital.",
+  title: "Leon Aljoscha Till Freier",
+  description: "Three companies, two continents, no outside capital. Alignment. Agreement. Execution.",
   openGraph: {
-    title: "Leon Freier",
+    title: "Leon Aljoscha Till Freier",
     description: "Strategy.",
     url: "https://leonfreier.com",
     siteName: "Leon Freier",
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Leon Freier",
+    title: "Leon Aljoscha Till Freier",
     description: "Strategy.",
     images: ["https://leonfreier.com/og-image.png"],
   },
@@ -26,7 +26,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=DM+Serif+Display&display=swap" rel="stylesheet" />
         <script
           dangerouslySetInnerHTML={{
             __html: `

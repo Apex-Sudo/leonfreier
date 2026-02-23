@@ -17,7 +17,7 @@ export default async function SpielzuegePage({ params }: { params: Promise<{ lan
 
       <section className="px-6 pb-16 md:pb-24">
         <div className="max-w-3xl mx-auto space-y-5">
-          <a href={`${prefix}/spielzuege/forgehouse`} className="glass-card p-8 block transition-all duration-200 hover:border-accent/20">
+          <a href={`${prefix}/spielzuege/forgehouse`} className="glass-card p-8 block transition-all duration-200 hover:border-accent/20 hover:bg-accent/5">
             <h2 className="company-name">ForgeHouse</h2>
             <p className="text-[14px] md:text-[15px] leading-relaxed text-foreground/60 mt-2">
               {t.forgehouse_desc_1}
@@ -28,7 +28,7 @@ export default async function SpielzuegePage({ params }: { params: Promise<{ lan
             <span className="text-accent text-[13px] mt-4 inline-block">{t.read_case} &rarr;</span>
           </a>
 
-          <a href={`${prefix}/spielzuege/gpu-compute`} className="glass-card p-8 block transition-all duration-200 hover:border-accent/20">
+          <a href={`${prefix}/spielzuege/gpu-compute`} className="glass-card p-8 block transition-all duration-200 hover:border-accent/20 hover:bg-accent/5">
             <h2 className="company-name">{t.gpu_title}</h2>
             <p className="text-[14px] md:text-[15px] leading-relaxed text-foreground/60 mt-2">
               {t.gpu_desc_1}
