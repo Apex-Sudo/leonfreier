@@ -1,4 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
   <rect width="32" height="32" rx="4" fill="none"/>
-  <text x="16" y="22.5" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="18" font-weight="600" fill="#B8916A">LF</text>
+  <g transform="translate(3.5, 24.5) scale(0.0178, -0.0178)" fill="#B8916A">
+    <path d="M413 693V700H8V692C118 692 118 650 118 520V180C118 50 118 8 8 8V0H678L726 298H718C687 118 620 8 410 8H333C273 8 273 30 273 150V520C273 653 275 693 413 693Z"/>
+    <g transform="translate(731, 0)">
+      <path d="M644 700H8V692C118 692 118 650 118 520V180C118 50 118 8 8 8V0L420 -1V7C273 7 273 49 273 179V354H325C475 354 516 303 510 195H517L534 518H527C520 402 475 361 325 361H273V692H422C601 692 644 610 661 459H669Z"/>
+    </g>
+  </g>
 </svg>
