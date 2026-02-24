@@ -22,7 +22,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
               priority
             />
             <div>
-              <h1 className="text-3xl md:text-[2.75rem] font-['DM_Serif_Display'] tracking-tight leading-[1.1] mb-3">Leon Aljoscha Till Freier</h1>
+              <h1 className="text-3xl md:text-[2.75rem] font-['Lust_Pro'] tracking-tight leading-[1.1] mb-3">Leon Aljoscha Till Freier</h1>
               <p className="text-base leading-relaxed text-foreground/75 max-w-lg">
                 {t.intro}
               </p>
