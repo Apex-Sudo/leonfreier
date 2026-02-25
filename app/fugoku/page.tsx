@@ -135,7 +135,7 @@ export default function FugokuAgreement() {
     <main className="min-h-screen">
 
       {/* ═══ Hero ═══ */}
-      <section className="gradient-hero px-6 pt-24 pb-16 md:pt-36 md:pb-24">
+      <section className="gradient-hero px-6 pt-24 pb-10 md:pt-36 md:pb-14">
         <div className="max-w-2xl mx-auto">
           <p className="text-[11px] font-medium tracking-widest text-accent uppercase mb-6">Working Agreement</p>
           <h1 className="text-4xl md:text-5xl font-semibold tracking-tight mb-4">Leon + Richard</h1>
@@ -147,10 +147,10 @@ export default function FugokuAgreement() {
       </section>
 
       {/* ═══ Culture Map ═══ */}
-      <section className="px-6 py-16 md:py-20">
+      <section className="px-6 py-10 md:py-12">
         <div className="max-w-2xl mx-auto">
           <h2 className="text-[11px] font-medium tracking-widest text-muted uppercase mb-3">Where We Differ</h2>
-          <p className="text-[13px] text-foreground/45 mb-10">
+          <p className="text-[13px] text-foreground/45 mb-6">
             Based on Erin Meyer&apos;s Culture Map. These aren&apos;t problems. They&apos;re the friction points 
             we address below, one by one.
           </p>
@@ -161,9 +161,9 @@ export default function FugokuAgreement() {
       </section>
 
       {/* ═══ Friction Points → Protocols ═══ */}
-      <section className="px-6 pb-16">
-        <div className="max-w-2xl mx-auto space-y-6">
-          <h2 className="text-[11px] font-medium tracking-widest text-muted uppercase mb-6">How We Handle It</h2>
+      <section className="px-6 pb-10">
+        <div className="max-w-2xl mx-auto space-y-5">
+          <h2 className="text-[11px] font-medium tracking-widest text-muted uppercase mb-4">How We Handle It</h2>
 
           <FrictionBlock
             number="01"
@@ -215,7 +215,7 @@ export default function FugokuAgreement() {
       </section>
 
       {/* ═══ Going Dark Protocol ═══ */}
-      <section className="px-6 pb-16">
+      <section className="px-6 pb-10">
         <div className="max-w-2xl mx-auto">
           <div className="glass-card p-8">
             <div className="flex items-baseline gap-3 mb-4">
@@ -246,7 +246,7 @@ export default function FugokuAgreement() {
       </section>
 
       {/* ═══ Meta-Rule ═══ */}
-      <section className="px-6 pb-16">
+      <section className="px-6 pb-10">
         <div className="max-w-2xl mx-auto">
           <div className="border-t border-border pt-12">
             <div className="text-center max-w-lg mx-auto">
@@ -261,7 +261,7 @@ export default function FugokuAgreement() {
       </section>
 
       {/* ═══ Navigation ═══ */}
-      <section className="px-6 pb-16">
+      <section className="px-6 pb-10">
         <div className="max-w-2xl mx-auto flex items-center justify-center gap-6 md:gap-10">
           {[
             { word: "Alignment", href: "/fugoku/alignment" },
