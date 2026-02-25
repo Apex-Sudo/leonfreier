@@ -112,19 +112,17 @@ export default async function ForgeHouseCase({ params }: { params: Promise<{ lan
       <section className="px-6 pb-14">
         <div className="max-w-2xl mx-auto">
           <h2 className="text-[11px] font-medium tracking-widest text-muted uppercase mb-6">{t.role_title}</h2>
-          <div className="glass-card p-8">
-            <div className="grid grid-cols-2 gap-y-3 text-[14px]">
-              <span className="text-foreground/50">Strategy</span>
-              <span className="text-foreground">{t.role_strategy}</span>
-              <span className="text-foreground/50">Design</span>
-              <span className="text-foreground">{t.role_design}</span>
-              <span className="text-foreground/50">Product</span>
-              <span className="text-foreground">{t.role_product}</span>
-              <span className="text-foreground/50">GTM</span>
-              <span className="text-foreground">{t.role_gtm}</span>
-              <span className="text-foreground/50">Launch</span>
-              <span className="text-foreground">{t.role_launch}</span>
-            </div>
+          <div className="grid grid-cols-2 gap-y-3 text-[14px]">
+            <span className="text-foreground/50">Strategy</span>
+            <span className="text-foreground">{t.role_strategy}</span>
+            <span className="text-foreground/50">Design</span>
+            <span className="text-foreground">{t.role_design}</span>
+            <span className="text-foreground/50">Product</span>
+            <span className="text-foreground">{t.role_product}</span>
+            <span className="text-foreground/50">GTM</span>
+            <span className="text-foreground">{t.role_gtm}</span>
+            <span className="text-foreground/50">Launch</span>
+            <span className="text-foreground">{t.role_launch}</span>
           </div>
         </div>
       </section>

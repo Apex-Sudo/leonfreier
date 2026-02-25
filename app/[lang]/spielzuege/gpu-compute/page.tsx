@@ -113,18 +113,16 @@ export default async function GpuComputeCaseStudy({ params }: { params: Promise<
           <h2 className="text-[11px] font-medium tracking-widest text-muted uppercase mb-6">
             {t.shows_title}
           </h2>
-          <div className="glass-card p-8">
-            <div className="space-y-5">
-              {showItems.map((item) => (
-                <div key={item.label} className="flex gap-4">
-                  <span className="text-accent text-[14px] mt-0.5 shrink-0">&#x2022;</span>
-                  <div>
-                    <p className="text-[14px] font-medium text-foreground">{item.label}</p>
-                    <p className="text-[13px] text-foreground/50 mt-0.5">{item.text}</p>
-                  </div>
+          <div className="space-y-5">
+            {showItems.map((item) => (
+              <div key={item.label} className="flex gap-4">
+                <span className="text-accent text-[14px] mt-0.5 shrink-0">&#x2022;</span>
+                <div>
+                  <p className="text-[14px] font-medium text-foreground">{item.label}</p>
+                  <p className="text-[13px] text-foreground/50 mt-0.5">{item.text}</p>
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
