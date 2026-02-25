@@ -32,7 +32,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
       </section>
 
       {/* ═══ Belief ═══ */}
-      <section className="belief-section px-6 py-14 md:py-20">
+      <section className="px-6 pt-10 pb-4 md:pt-14 md:pb-6">
         <div className="max-w-3xl mx-auto text-center">
           <p className="text-[20px] font-medium leading-snug tracking-wide text-accent">
             {t.tagline}
@@ -47,7 +47,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
 
             <div className="glass-card p-7 transition-all duration-200 hover:border-accent/20 hover:shadow-md">
               <div className="flex items-baseline justify-between gap-4">
-                <a href="https://danangbeachvillas.com" target="_blank" rel="noopener noreferrer" className="company-name hover:underline decoration-accent/30 underline-offset-4">
+                <a href="https://danangbeachvillas.com" target="_blank" rel="noopener noreferrer" className="font-semibold text-foreground hover:text-accent hover:underline decoration-accent/30 underline-offset-4 transition-colors">
                   Da Nang Beach Villas
                 </a>
                 <span className="text-[13px] text-muted shrink-0">{t.dnbv_date}</span>
@@ -59,7 +59,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
 
             <div className="glass-card p-7 transition-all duration-200 hover:border-accent/20 hover:shadow-md">
               <div className="flex items-baseline justify-between gap-4">
-                <a href="https://apexalpha.app" target="_blank" rel="noopener noreferrer" className="company-name hover:underline decoration-accent/30 underline-offset-4">
+                <a href="https://apexalpha.app" target="_blank" rel="noopener noreferrer" className="font-semibold text-foreground hover:text-accent hover:underline decoration-accent/30 underline-offset-4 transition-colors">
                   ApexAlpha
                 </a>
                 <span className="text-[13px] text-muted shrink-0">{t.aa_date}</span>
@@ -71,7 +71,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
 
             <div className="glass-card p-7 transition-all duration-200 hover:border-accent/20 hover:shadow-md">
               <div className="flex items-baseline justify-between gap-4">
-                <a href="https://forgehouse.io" target="_blank" rel="noopener noreferrer" className="company-name hover:underline decoration-accent/30 underline-offset-4">
+                <a href="https://forgehouse.io" target="_blank" rel="noopener noreferrer" className="font-semibold text-foreground hover:text-accent hover:underline decoration-accent/30 underline-offset-4 transition-colors">
                   ForgeHouse
                 </a>
                 <span className="text-[13px] text-muted shrink-0">{t.fh_date}</span>
@@ -83,21 +83,21 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
 
           </div>
 
-          <div className="mt-8 bg-[#1A1A1A] rounded-2xl p-8 md:p-10">
-            <p className="text-base font-medium text-[#FAFAF8]/90 leading-relaxed">
-              {t.value_p1}
+          <div className="pl-6 border-l-2 border-accent/20 mt-8">
+            <p className="text-[14px] text-foreground/45 italic leading-relaxed">
+              &ldquo;{t.value_p1}&rdquo;
             </p>
-            <a href={`/${lang === 'en' ? '' : lang + '/'}spielzuege`} className="inline-block mt-5 text-base font-medium text-[#B8916A] hover:text-[#FAFAF8] transition-colors">
-              {t.see_work} &rarr;
-            </a>
           </div>
+          <a href={`/${lang === 'en' ? '' : lang + '/'}spielzuege`} className="inline-block mt-4 text-[15px] font-medium text-accent hover:text-foreground transition-colors">
+            {t.see_work} &rarr;
+          </a>
         </div>
       </section>
 
       {/* ═══ Writing + Contact ═══ */}
       <section className="px-6 pb-12 md:pb-18">
         <div className="max-w-3xl mx-auto">
-          <div className="contact-card p-8">
+          <div className="glass-card p-8">
             <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-8">
               <div>
                 <h2 className="text-[13px] font-medium tracking-widest text-muted uppercase mb-4">{t.writing}</h2>

@@ -35,10 +35,15 @@ export default async function LangLayout({
             <a href={`${prefix}/spielzuege`} className="text-[13px] text-foreground/60 hover:text-foreground transition-colors">
               {dict.nav.spielzuege}
             </a>
+            <a href={`${prefix}/alignment`} className="text-[13px] text-foreground/60 hover:text-foreground transition-colors">
+              Alignment
+            </a>
             <a href="mailto:leon@maxresult.ai" className="text-[13px] text-foreground/60 hover:text-foreground transition-colors">
               {dict.nav.contact}
             </a>
-            <LanguageSwitcher currentLocale={locale} />
+            <div className="ml-4">
+              <LanguageSwitcher currentLocale={locale} />
+            </div>
           </div>
         </div>
       </nav>
