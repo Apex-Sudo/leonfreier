@@ -33,7 +33,9 @@ const sections = [
     afterTiers: [
       "3.4  No salary, no retainer. Leon only earns when Fugoku earns.",
       "3.5  Minimum 18-month term on all clients acquired during the partnership window, even if Richard moves to his own billing stack sooner.",
-      "3.6  Richard retains full operational control of Fugoku Cloud at all times.",
+      "3.6  Royalty continues indefinitely on the declining tiers for all clients acquired during the partnership window.",
+      "3.7  Buyout option: Richard may buy out the royalty obligation at any time for a fixed amount equal to 24× the average monthly royalty of the preceding 6 months. Upon payment, all future royalty obligations are extinguished.",
+      "3.8  Richard retains full operational control of Fugoku Cloud at all times.",
     ],
   },
   {
@@ -41,7 +43,7 @@ const sections = [
     title: "LAYER 2: STRATEGIC ADVISORY",
     content: [
       "4.1  Leon contributes strategic advisory: category positioning, go-to-market, pricing architecture, framing, messaging, and design.",
-      "4.2  Small advisory equity stake in Fugoku, agreed upon now, vested monthly over 24 months, tied to active contribution.",
+      "4.2  15% advisory equity stake in Fugoku, vested monthly over 24 months, tied to active contribution.",
       "4.3  Vesting stops if either side goes inactive for 60 days.",
       "4.4  This is not a consultant arrangement. Leon is financially aligned with Fugoku's growth. Skin in the game from day one.",
     ],
@@ -56,11 +58,11 @@ const sections = [
   },
   {
     num: "§6",
-    title: "THE 30-DAY QUESTION",
+    title: "FIRST MILESTONE",
     content: [
-      "Can Richard ship the managed deployment layer on OpenMetal in 30 days?",
-      "The old Coolify clients are still warm. That's where this starts.",
-      "30 days is enough to know if Stage 1 has legs. First customer signed or clear pivot signal.",
+      "6.1  The first milestone is defined jointly after the upstream work (ICP, business model, GTM strategy) is completed.",
+      "6.2  Both parties agree on a specific, measurable deliverable with a 30-day deadline.",
+      "6.3  30 days is enough to know if Stage 1 has legs. First customer signed or clear pivot signal.",
     ],
   },
   {
@@ -85,7 +87,7 @@ const sections = [
     num: "§9",
     title: "GOVERNING LAW",
     content: [
-      "This agreement is governed by the laws of the Federal Republic of Germany. Disputes shall be resolved in the courts of Hamburg.",
+      "This agreement is governed by the laws of the State of Delaware, United States. Disputes shall be resolved in the courts of Delaware.",
     ],
   },
 ];
