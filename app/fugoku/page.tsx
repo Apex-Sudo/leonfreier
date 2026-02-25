@@ -1,249 +1,279 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Fugoku — Engagement Proposal | Leon Freier",
-  description: "Strategic consulting engagement proposal for Fugoku Cloud.",
+  title: "Fugoku — Working Agreement | Leon Freier",
+  description: "Cultural operating agreement for the Leon + Richard partnership.",
   robots: { index: false, follow: false },
 };
 
-export default function FugokuProposal() {
+/* ─── Culture Map Data ─── */
+const dimensions = [
+  {
+    label: "Scheduling",
+    subtitle: "How we treat deadlines and time commitments",
+    left: "Linear",
+    right: "Flexible",
+    leon: 18,
+    richard: 72,
+  },
+  {
+    label: "Trust",
+    subtitle: "How trust is built: through delivery or through relationship",
+    left: "Task-based",
+    right: "Relationship-based",
+    leon: 45,
+    richard: 82,
+  },
+  {
+    label: "Communication",
+    subtitle: "How we say things: explicit and brief, or wrapped in context",
+    left: "Direct / Low-context",
+    right: "High-context",
+    leon: 15,
+    richard: 68,
+  },
+  {
+    label: "Feedback",
+    subtitle: "How we deliver criticism: straight or softened",
+    left: "Direct negative",
+    right: "Indirect",
+    leon: 20,
+    richard: 70,
+  },
+];
+
+function CultureMapChart() {
+  return (
+    <div className="space-y-8">
+      <div className="flex justify-between text-[11px] font-medium text-muted uppercase tracking-widest mb-2">
+        <span>Leon</span>
+        <span>Richard</span>
+      </div>
+      {dimensions.map((d) => (
+        <div key={d.label}>
+          <p className="text-[13px] font-medium text-foreground mb-0.5">{d.label}</p>
+          <p className="text-[11px] text-foreground/35 mb-2">{d.subtitle}</p>
+          <div className="flex justify-between text-[11px] text-muted mb-2">
+            <span>{d.left}</span>
+            <span>{d.right}</span>
+          </div>
+          <div className="relative h-2 bg-foreground/5 rounded-full">
+            {/* Leon marker */}
+            <div
+              className="absolute top-1/2 -translate-y-1/2 w-3.5 h-3.5 rounded-full bg-accent border-2 border-background shadow-sm z-10"
+              style={{ left: `${d.leon}%`, transform: `translate(-50%, -50%)` }}
+              title={`Leon: ${d.left} side`}
+            />
+            {/* Richard marker */}
+            <div
+              className="absolute top-1/2 -translate-y-1/2 w-3.5 h-3.5 rounded-full bg-foreground/60 border-2 border-background shadow-sm z-10"
+              style={{ left: `${d.richard}%`, transform: `translate(-50%, -50%)` }}
+              title={`Richard: ${d.right} side`}
+            />
+            {/* Tension line between markers */}
+            <div
+              className="absolute top-1/2 -translate-y-1/2 h-0.5 bg-red-400/30 rounded-full"
+              style={{
+                left: `${Math.min(d.leon, d.richard)}%`,
+                width: `${Math.abs(d.leon - d.richard)}%`,
+              }}
+            />
+          </div>
+        </div>
+      ))}
+      <div className="flex gap-6 pt-2">
+        <div className="flex items-center gap-2">
+          <div className="w-3 h-3 rounded-full bg-accent" />
+          <span className="text-[11px] text-muted">Leon</span>
+        </div>
+        <div className="flex items-center gap-2">
+          <div className="w-3 h-3 rounded-full bg-foreground/60" />
+          <span className="text-[11px] text-muted">Richard</span>
+        </div>
+        <div className="flex items-center gap-2">
+          <div className="w-6 h-0.5 bg-red-400/30 rounded-full" />
+          <span className="text-[11px] text-muted">Tension zone</span>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/* ─── Friction Block ─── */
+function FrictionBlock({
+  number,
+  dimension,
+  tension,
+  protocol,
+}: {
+  number: string;
+  dimension: string;
+  tension: string;
+  protocol: string[];
+}) {
+  return (
+    <div className="glass-card p-8">
+      <div className="flex items-baseline gap-3 mb-4">
+        <span className="text-accent font-mono text-[13px] shrink-0">{number}</span>
+        <h3 className="text-[16px] font-semibold text-foreground">{dimension}</h3>
+      </div>
+      <p className="text-[13px] leading-relaxed text-foreground/50 mb-6 italic">{tension}</p>
+      <div className="space-y-3">
+        {protocol.map((line, i) => (
+          <div key={i} className="flex gap-3">
+            <span className="text-accent/60 mt-0.5 shrink-0">—</span>
+            <p className="text-[13px] leading-relaxed text-foreground/70">{line}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+export default function FugokuAgreement() {
   return (
     <main className="min-h-screen">
 
-      {/* ═══ Hero Header ═══ */}
+      {/* ═══ Hero ═══ */}
       <section className="gradient-hero px-6 pt-24 pb-16 md:pt-36 md:pb-24">
         <div className="max-w-2xl mx-auto">
-          <p className="text-[11px] font-medium tracking-widest text-accent uppercase mb-6">Engagement Proposal</p>
-          <h1 className="text-4xl md:text-5xl font-semibold tracking-tight mb-4">Fugoku Cloud</h1>
-          <p className="text-[15px] text-foreground/50">Leon Freier · February 22, 2026</p>
+          <p className="text-[11px] font-medium tracking-widest text-accent uppercase mb-6">Working Agreement</p>
+          <h1 className="text-4xl md:text-5xl font-semibold tracking-tight mb-4">Leon + Richard</h1>
+          <p className="text-[15px] text-foreground/50 leading-relaxed max-w-lg">
+            This is not a legal contract. It&apos;s a cultural operating agreement. The stuff that normally takes 
+            6 months of friction to figure out, written down upfront.
+          </p>
         </div>
       </section>
 
-      {/* ═══ Purpose ═══ */}
+      {/* ═══ Culture Map ═══ */}
       <section className="px-6 py-16 md:py-20">
         <div className="max-w-2xl mx-auto">
-          <div className="flex items-center justify-center gap-6 md:gap-10">
-            {[
-              { word: "Alignment", href: "/fugoku/alignment" },
-              { word: "Agreement", href: "/fugoku/alignment" },
-              { word: "Execution", href: "/fugoku/execution" },
-            ].map((item, i) => (
-              <div key={item.word} className="flex items-center gap-6 md:gap-10">
-                <a href={item.href} className="text-[20px] md:text-[24px] font-semibold tracking-tight text-foreground/80 hover:text-accent transition-colors">
-                  {item.word}
-                </a>
-                {i < 2 && <span className="text-accent/50 text-[20px]">·</span>}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* spacer */}
-
-      {/* ═══ Scope Options ═══ */}
-      <section className="px-6 pt-8 pb-20 md:pb-28">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-[11px] font-medium tracking-widest text-muted uppercase mb-10">Scope</h2>
-          
-          <div className="grid md:grid-cols-3 gap-5">
-            {/* Option A */}
-            <div className="glass-card p-6 md:p-7 transition-all duration-200 hover:border-accent/20 flex flex-col">
-              <span className="text-[11px] font-medium text-muted bg-foreground/5 px-3 py-1 rounded-full self-start mb-4">5h/week</span>
-              <h3 className="text-[16px] font-semibold text-foreground mb-3">Strategy + Architecture</h3>
-              <p className="text-[13px] leading-relaxed text-foreground/55 mb-6 flex-1">
-                Weekly 1-hour calls. Written deliverables: roadmap, GTM, positioning. 
-                No day-to-day involvement.
-              </p>
-              <div className="border-t border-border pt-4 space-y-3">
-                <div className="text-center mb-2">
-                  <span className="text-[28px] font-bold text-foreground">$2,500</span>
-                  <span className="text-[13px] text-muted">/mo</span>
-                </div>
-                <div className="flex justify-between text-[13px]">
-                  <span className="text-muted">Equity</span>
-                  <span className="font-medium text-foreground">5%</span>
-                </div>
-                <div className="flex justify-between text-[13px]">
-                  <span className="text-muted">Vesting</span>
-                  <span className="text-foreground/70">1yr, no cliff</span>
-                </div>
-                <div className="flex justify-between text-[13px]">
-                  <span className="text-muted">Starts</span>
-                  <span className="text-foreground/70">March 1</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Option B — Recommended */}
-            <div className="relative glass-card p-6 md:p-7 ring-2 ring-accent/40 shadow-[0_0_40px_rgba(184,145,106,0.08)] transition-all duration-200 flex flex-col md:-mt-3 md:mb-[-12px]">
-              <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                <span className="text-[10px] font-semibold text-white bg-accent px-4 py-1 rounded-full tracking-wide whitespace-nowrap">RECOMMENDED</span>
-              </div>
-              <span className="text-[11px] font-medium text-muted bg-foreground/5 px-3 py-1 rounded-full self-start mb-4 mt-2">10h/week</span>
-              <h3 className="text-[16px] font-semibold text-foreground mb-3">Strategy + Accountability</h3>
-              <p className="text-[13px] leading-relaxed text-foreground/55 mb-6 flex-1">
-                Everything in Strategy, plus EOS implementation, weekly scorecard reviews, 
-                and issue resolution. Fractional CSO role.
-              </p>
-              <div className="border-t border-accent/20 pt-4 space-y-3">
-                <div className="text-center mb-2">
-                  <span className="text-[28px] font-bold text-foreground">$4,000</span>
-                  <span className="text-[13px] text-muted">/mo</span>
-                </div>
-                <div className="flex justify-between text-[13px]">
-                  <span className="text-muted">Equity</span>
-                  <span className="font-medium text-foreground">10%</span>
-                </div>
-                <div className="flex justify-between text-[13px]">
-                  <span className="text-muted">Vesting</span>
-                  <span className="text-foreground/70">1yr, no cliff</span>
-                </div>
-                <div className="flex justify-between text-[13px]">
-                  <span className="text-muted">Starts</span>
-                  <span className="text-foreground/70">March 1</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Option C */}
-            <div className="glass-card p-6 md:p-7 transition-all duration-200 hover:border-accent/20 flex flex-col">
-              <span className="text-[11px] font-medium text-muted bg-foreground/5 px-3 py-1 rounded-full self-start mb-4">15–20h/week</span>
-              <h3 className="text-[16px] font-semibold text-foreground mb-3">Strategy + Execution</h3>
-              <p className="text-[13px] leading-relaxed text-foreground/55 mb-6 flex-1">
-                Everything in Accountability, plus direct execution: outreach, partnerships, 
-                vendor negotiations. Lower cash, higher equity.
-              </p>
-              <div className="border-t border-border pt-4 space-y-3">
-                <div className="text-center mb-2">
-                  <span className="text-[28px] font-bold text-foreground">$3,000</span>
-                  <span className="text-[13px] text-muted">/mo</span>
-                </div>
-                <div className="flex justify-between text-[13px]">
-                  <span className="text-muted">Equity</span>
-                  <span className="font-medium text-foreground">15%</span>
-                </div>
-                <div className="flex justify-between text-[13px]">
-                  <span className="text-muted">Vesting</span>
-                  <span className="text-foreground/70">1yr, 3mo cliff</span>
-                </div>
-                <div className="flex justify-between text-[13px]">
-                  <span className="text-muted">Starts</span>
-                  <span className="text-foreground/70">March 1</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ═══ Cadence ═══ */}
-      <section className="px-6 pb-14">
-        <div className="max-w-2xl mx-auto">
-          <h2 className="text-[11px] font-medium tracking-widest text-muted uppercase mb-6">Cadence</h2>
+          <h2 className="text-[11px] font-medium tracking-widest text-muted uppercase mb-3">Where We Differ</h2>
+          <p className="text-[13px] text-foreground/45 mb-10">
+            Based on Erin Meyer&apos;s Culture Map. These aren&apos;t problems. They&apos;re the friction points 
+            we address below, one by one.
+          </p>
           <div className="glass-card p-8">
+            <CultureMapChart />
+          </div>
+        </div>
+      </section>
+
+      {/* ═══ Friction Points → Protocols ═══ */}
+      <section className="px-6 pb-16">
+        <div className="max-w-2xl mx-auto space-y-6">
+          <h2 className="text-[11px] font-medium tracking-widest text-muted uppercase mb-6">How We Handle It</h2>
+
+          <FrictionBlock
+            number="01"
+            dimension="Scheduling"
+            tension="Leon operates on compressed time. Richard operates on relationship time. Neither is wrong."
+            protocol={[
+              "If Richard commits to a date, it's real. If he can't make it, he says so 24h before, not after.",
+              "\"I'll try\" is not a commitment. \"I will by [date]\" is.",
+              "Leon doesn't set Richard's deadlines. Richard proposes his own and owns them.",
+              "Timelines are Richard's to set. Accountability to those timelines is mutual.",
+            ]}
+          />
+
+          <FrictionBlock
+            number="02"
+            dimension="Trust"
+            tension="Leon trusts through verified output. Richard trusts through relationship depth. Both are valid paths to the same place."
+            protocol={[
+              "Fugoku: Richard decides. Leon advises. Leon doesn't override on technical or operational calls.",
+              "Strategy, positioning, pricing: collaborative, but Richard has final say on his company.",
+              "Both sides assume positive intent until proven otherwise.",
+              "Leon's Stripe/LLC involvement: Leon can pause billing infrastructure with 30 days notice if commitments aren't met. Richard can exit the arrangement anytime with the same notice.",
+            ]}
+          />
+
+          <FrictionBlock
+            number="03"
+            dimension="Communication"
+            tension="Leon communicates direct. Brevity is not harshness. Richard communicates with context. Silence is not disagreement."
+            protocol={[
+              "Default channel: Telegram, async.",
+              "If it's urgent: say \"urgent\" explicitly. Everything else is responded to within 24h, not immediately.",
+              "Leon communicates direct. Richard should not read harshness into brevity. If Leon's upset, he'll say so.",
+              "Richard flags disagreement openly, not through silence or delay. Going dark is not the same as saying no.",
+            ]}
+          />
+
+          <FrictionBlock
+            number="04"
+            dimension="Feedback"
+            tension="Leon gives feedback straight. Richard processes internally first. The gap between these two styles is where misunderstandings live."
+            protocol={[
+              "Leon gives feedback straight. Richard can ask for the \"why\" but shouldn't take directness as disrespect.",
+              "Richard gives feedback in whatever form feels natural. The only rule: it has to come out, not stay internal.",
+              "Both sides assume positive intent until proven otherwise.",
+            ]}
+          />
+        </div>
+      </section>
+
+      {/* ═══ Going Dark Protocol ═══ */}
+      <section className="px-6 pb-16">
+        <div className="max-w-2xl mx-auto">
+          <div className="glass-card p-8">
+            <div className="flex items-baseline gap-3 mb-4">
+              <span className="text-accent font-mono text-[13px] shrink-0">05</span>
+              <h3 className="text-[16px] font-semibold text-foreground">Going Dark Protocol</h3>
+            </div>
+            <p className="text-[13px] leading-relaxed text-foreground/50 mb-6 italic">
+              This protocol exists to remove guesswork, not to punish.
+            </p>
             <div className="space-y-4">
               <div className="flex gap-4">
-                <span className="text-accent font-mono text-[13px] mt-0.5 shrink-0">01</span>
-                <div>
-                  <p className="text-[14px] font-medium text-foreground">Weekly sync</p>
-                  <p className="text-[13px] text-foreground/50">Fixed day and time. On the calendar, non-negotiable.</p>
-                </div>
+                <span className="text-[12px] font-semibold text-accent shrink-0 w-20">48h</span>
+                <p className="text-[13px] text-foreground/70">No response: Leon sends one check-in.</p>
               </div>
+              <div className="border-t border-border/50" />
               <div className="flex gap-4">
-                <span className="text-accent font-mono text-[13px] mt-0.5 shrink-0">02</span>
-                <div>
-                  <p className="text-[14px] font-medium text-foreground">24h decision turnaround</p>
-                  <p className="text-[13px] text-foreground/50">Blocking items get resolved within one business day.</p>
-                </div>
+                <span className="text-[12px] font-semibold text-accent shrink-0 w-20">+ 24h</span>
+                <p className="text-[13px] text-foreground/70">No response to check-in: work is assumed paused. No hard feelings, but the clock stops on deliverables.</p>
               </div>
+              <div className="border-t border-border/50" />
               <div className="flex gap-4">
-                <span className="text-accent font-mono text-[13px] mt-0.5 shrink-0">03</span>
-                <div>
-                  <p className="text-[14px] font-medium text-foreground">Async via Telegram</p>
-                  <p className="text-[13px] text-foreground/50">Quick updates, links, decisions. No Slack overhead for two people.</p>
-                </div>
-              </div>
-              <div className="flex gap-4">
-                <span className="text-accent font-mono text-[13px] mt-0.5 shrink-0">04</span>
-                <div>
-                  <p className="text-[14px] font-medium text-foreground">Missed meetings</p>
-                  <p className="text-[13px] text-foreground/50">Reschedule within 48h. Three no-shows pauses the engagement.</p>
-                </div>
+                <span className="text-[12px] font-semibold text-accent shrink-0 w-20">Return</span>
+                <p className="text-[13px] text-foreground/70">Just pick up. No apology needed. But say where things stand.</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ═══ First 30 Days ═══ */}
-      <section className="px-6 pb-14">
-        <div className="max-w-2xl mx-auto">
-          <h2 className="text-[11px] font-medium tracking-widest text-muted uppercase mb-6">First 30 Days</h2>
-          <div className="glass-card p-8">
-            <div className="space-y-5">
-              <div className="flex items-baseline gap-4">
-                <span className="text-[12px] font-semibold text-accent shrink-0 w-14">Week 1</span>
-                <div>
-                  <p className="text-[14px] font-medium text-foreground">Lock scope + comp. Set up EOS basics.</p>
-                  <p className="text-[13px] text-foreground/45">VTO, Rocks, Scorecard. The operating system.</p>
-                </div>
-              </div>
-              <div className="border-t border-border/50"></div>
-              <div className="flex items-baseline gap-4">
-                <span className="text-[12px] font-semibold text-accent shrink-0 w-14">Week 2</span>
-                <div>
-                  <p className="text-[14px] font-medium text-foreground">5 discovery calls with your network.</p>
-                  <p className="text-[13px] text-foreground/45">Validate Stage 1 demand. Real conversations, not assumptions.</p>
-                </div>
-              </div>
-              <div className="border-t border-border/50"></div>
-              <div className="flex items-baseline gap-4">
-                <span className="text-[12px] font-semibold text-accent shrink-0 w-14">Week 3</span>
-                <div>
-                  <p className="text-[14px] font-medium text-foreground">Validate pricing. Draft first proposal.</p>
-                  <p className="text-[13px] text-foreground/45">What will Nigerian companies pay for managed infrastructure?</p>
-                </div>
-              </div>
-              <div className="border-t border-border/50"></div>
-              <div className="flex items-baseline gap-4">
-                <span className="text-[12px] font-semibold text-accent shrink-0 w-14">Week 4</span>
-                <div>
-                  <p className="text-[14px] font-medium text-foreground">First customer signed or clear pivot signal.</p>
-                  <p className="text-[13px] text-foreground/45">30 days is enough to know if Stage 1 has legs.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ═══ CTA ═══ */}
+      {/* ═══ Meta-Rule ═══ */}
       <section className="px-6 pb-16">
-        <div className="max-w-4xl mx-auto text-center">
-          <a 
-            href="/fugoku/alignment" 
-            className="inline-block text-[15px] font-medium px-8 py-3.5 rounded-xl bg-accent text-white hover:bg-accent-dark transition-colors duration-200"
-          >
-            Alignment
-          </a>
-          {/* */}
-        </div>
-      </section>
-
-      {/* ═══ Fine Print: Case Study + Principles ═══ */}
-      <section className="px-6 pt-8 pb-20 md:pb-28">
         <div className="max-w-2xl mx-auto">
           <div className="border-t border-border pt-12">
             <div className="text-center max-w-lg mx-auto">
-              <h3 className="text-[11px] font-medium tracking-widest text-muted uppercase mb-4">How This Works</h3>
-              <p className="text-[13px] leading-relaxed text-foreground/50">
-                I&apos;m a consultant, not a cofounder. You own execution, I own strategy and accountability. 
-                If cadence breaks down, the engagement pauses. We renegotiate at revenue milestones 
-                that change the math.
+              <h3 className="text-[11px] font-medium tracking-widest text-muted uppercase mb-4">The Meta-Rule</h3>
+              <p className="text-[15px] leading-relaxed text-foreground/60">
+                When in doubt: say it, don&apos;t assume it.<br />
+                A 10-second message beats 3 days of silence every time.
               </p>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* ═══ Navigation ═══ */}
+      <section className="px-6 pb-16">
+        <div className="max-w-2xl mx-auto flex items-center justify-center gap-6 md:gap-10">
+          {[
+            { word: "Alignment", href: "/fugoku/alignment" },
+            { word: "Execution", href: "/fugoku/execution" },
+          ].map((item, i) => (
+            <div key={item.word} className="flex items-center gap-6 md:gap-10">
+              <a href={item.href} className="text-[16px] font-medium text-foreground/60 hover:text-accent transition-colors">
+                {item.word} →
+              </a>
+              {i < 1 && <span className="text-accent/30 text-[16px]">·</span>}
+            </div>
+          ))}
         </div>
       </section>
 

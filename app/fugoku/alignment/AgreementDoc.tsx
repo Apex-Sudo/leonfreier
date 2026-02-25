@@ -1,97 +1,84 @@
 "use client";
 
-import { useState } from "react";
-
 const sections = [
   {
     num: "§1",
     title: "ENGAGEMENT",
     content: [
-      "The Company engages the Consultant to provide strategic consulting services as outlined in the selected Scope Option. This is not an employment relationship. The Consultant operates as an independent contractor.",
+      "This agreement establishes a partnership between Leon Freier and Richard Okonicha (Fugoku Cloud) for the launch phase of Fugoku Cloud.",
+      "This is not an employment relationship. Leon operates as an independent strategic partner with skin in the game.",
     ],
   },
   {
     num: "§2",
-    title: "SCOPE",
+    title: "THE PROBLEM",
     content: [
-      "The Company selects one of the following engagement tiers:",
-    ],
-    options: [
-      {
-        label: "Option A",
-        name: "Strategy + Architecture",
-        terms: "5 hours/week  ·  $2,500/month  ·  5% equity (12-month vest, no cliff)",
-        desc: "Weekly 1-hour calls. Written deliverables: roadmap, GTM, positioning. No day-to-day involvement.",
-      },
-      {
-        label: "Option B",
-        name: "Strategy + Accountability",
-        terms: "10 hours/week  ·  $4,000/month  ·  10% equity (12-month vest, no cliff)",
-        desc: "Everything in Option A, plus EOS implementation, weekly scorecard reviews, issue resolution. Fractional CSO role.",
-        recommended: true,
-      },
-      {
-        label: "Option C",
-        name: "Strategy + Execution",
-        terms: "15–20 hours/week  ·  $3,000/month  ·  15% equity (12-month vest, 3-month cliff)",
-        desc: "Everything in Option B, plus direct execution: outreach, partnerships, vendor negotiations.",
-      },
+      "Fugoku Cloud's previous billing infrastructure blocked revenue. Richard has the product and the clients. Leon has a US LLC (Leonidas LLC) with active Stripe.",
+      "This agreement removes the billing bottleneck and establishes a long-term strategic partnership.",
     ],
   },
   {
     num: "§3",
-    title: "COMPENSATION",
+    title: "LAYER 1: BILLING UNLOCK",
     content: [
-      "3.1  Monthly retainer is due on the 1st of each calendar month, payable within 7 days.",
-      "3.2  Late payments accrue interest at 1.5% per month. Payments more than 14 days overdue constitute a material breach.",
-      "3.3  Equity vests monthly in equal installments over 12 months from the Effective Date. Where a cliff applies, no equity vests until the cliff period is completed, at which point all accrued equity vests immediately.",
-      "3.4  Vested equity is retained upon termination regardless of which party terminates. Unvested equity is forfeited.",
+      "3.1  Fugoku Cloud billing runs through Leonidas LLC's Stripe for the launch phase. Clients pay through Leon's entity, Richard delivers the infrastructure.",
+      "3.2  Zero cost to Richard upfront.",
+      "3.3  Revenue royalty on gross collections through Stripe:",
+    ],
+    tiers: [
+      { range: "Until $5k/month", rate: "25%" },
+      { range: "$5k to $15k/month", rate: "15%" },
+      { range: "Above $15k/month", rate: "10%" },
+    ],
+    afterTiers: [
+      "3.4  No salary, no retainer. Leon only earns when Fugoku earns.",
+      "3.5  Minimum 18-month term on all clients acquired during the partnership window, even if Richard moves to his own billing stack sooner.",
+      "3.6  Richard retains full operational control of Fugoku Cloud at all times.",
     ],
   },
   {
     num: "§4",
-    title: "CADENCE",
+    title: "LAYER 2: STRATEGIC ADVISORY",
     content: [
-      "4.1  Weekly sync call on a fixed day and time, agreed upon at engagement start.",
-      "4.2  Blocking decisions resolved within 24 hours.",
-      "4.3  Async communication via Telegram.",
-      "4.4  Missed meetings must be rescheduled within 48 hours. Three unrescheduled missed meetings within any 60-day period constitutes grounds for the Consultant to pause or terminate the engagement without forfeiting vested equity.",
+      "4.1  Leon contributes strategic advisory: category positioning, go-to-market, pricing architecture, framing, messaging, and design.",
+      "4.2  Small advisory equity stake in Fugoku, agreed upon now, vested monthly over 24 months, tied to active contribution.",
+      "4.3  Vesting stops if either side goes inactive for 60 days.",
+      "4.4  This is not a consultant arrangement. Leon is financially aligned with Fugoku's growth. Skin in the game from day one.",
     ],
   },
   {
     num: "§5",
-    title: "INTELLECTUAL PROPERTY",
+    title: "TRANSPARENCY",
     content: [
-      "5.1  Work product created specifically for the Company during the engagement is owned by the Company.",
-      "5.2  The Consultant retains ownership of all pre-existing methodologies, frameworks, and tools, including those applied during the engagement.",
-      "5.3  The Consultant grants the Company a perpetual, non-exclusive license to use any frameworks applied during the engagement.",
+      "5.1  Full transparency on revenue. Shared dashboard, not reports.",
+      "5.2  Both parties have real-time access to Stripe data.",
     ],
   },
   {
     num: "§6",
-    title: "CASE STUDY RIGHTS",
+    title: "THE 30-DAY QUESTION",
     content: [
-      "6.1  After 90 days from the Effective Date, the Consultant may document the engagement as a public case study.",
-      "6.2  No proprietary data, financials, or technical IP will be disclosed without written approval.",
-      "6.3  The Company receives final review before publication, with a 14-day review window.",
+      "Can Richard ship the managed deployment layer on OpenMetal in 30 days?",
+      "The old Coolify clients are still warm. That's where this starts.",
+      "30 days is enough to know if Stage 1 has legs. First customer signed or clear pivot signal.",
     ],
   },
   {
     num: "§7",
-    title: "CONFIDENTIALITY",
+    title: "EXIT",
     content: [
-      "7.1  Both parties agree to keep confidential any proprietary information shared during the engagement.",
-      "7.2  This obligation survives termination for 24 months.",
+      "7.1  Leon can pause billing infrastructure with 30 days notice if commitments aren't met.",
+      "7.2  Richard can exit the arrangement anytime with 30 days notice.",
+      "7.3  Upon exit, the 18-month minimum on acquired clients still applies.",
+      "7.4  Vested equity is retained. Unvested equity is forfeited.",
     ],
   },
   {
     num: "§8",
-    title: "TERMINATION",
+    title: "CONFIDENTIALITY",
     content: [
-      "8.1  Either party may terminate with 30 days written notice.",
-      "8.2  Upon termination, vested equity is retained. Unvested equity is forfeited.",
-      "8.3  Outstanding retainer payments remain due for services already rendered.",
-      "8.4  The cadence clause (§4.4) constitutes an additional termination right for the Consultant.",
+      "8.1  Both parties agree to keep confidential any proprietary information shared during the engagement.",
+      "8.2  This obligation survives termination for 24 months.",
     ],
   },
   {
@@ -104,8 +91,6 @@ const sections = [
 ];
 
 export default function AgreementDoc() {
-  const [selectedOption, setSelectedOption] = useState<string | null>(null);
-
   const handleExportPDF = () => {
     window.print();
   };
@@ -145,20 +130,17 @@ export default function AgreementDoc() {
       `}</style>
 
       <main className="min-h-screen">
-        {/* spacer */}
-
-        {/* Document */}
         <div className="print-page max-w-2xl mx-auto px-6 pt-24 pb-20 md:pt-36">
 
           {/* Header */}
           <header className="text-center mb-20">
             <p className="text-[11px] font-medium tracking-[0.25em] text-accent uppercase mb-8">
-              Consulting Services Agreement
+              Launch Partnership Agreement
             </p>
             <h1 className="text-[28px] md:text-[34px] font-light tracking-tight text-foreground/90 mb-3" style={{ fontFamily: "Georgia, serif" }}>
               Leon Freier  <span className="text-accent/40">×</span>  Fugoku Cloud
             </h1>
-            <p className="text-[13px] text-foreground/35 mt-6">February 22, 2026</p>
+            <p className="text-[13px] text-foreground/35 mt-6">February 25, 2026</p>
           </header>
 
           {/* Parties */}
@@ -166,10 +148,10 @@ export default function AgreementDoc() {
             <p className="text-[11px] font-medium tracking-[0.2em] text-accent/70 uppercase mb-4">Between</p>
             <div className="space-y-2">
               <p className="text-[14px] text-foreground/70">
-                <span className="font-medium text-foreground/90">Leon Freier</span> (&ldquo;Consultant&rdquo;), Hamburg, Germany
+                <span className="font-medium text-foreground/90">Leon Freier</span>, operating through Leonidas LLC (US), Hamburg, Germany
               </p>
               <p className="text-[14px] text-foreground/70">
-                <span className="font-medium text-foreground/90">Richard Okonicha</span> (&ldquo;Company&rdquo;), trading as Fugoku Cloud
+                <span className="font-medium text-foreground/90">Richard Okonicha</span>, trading as Fugoku Cloud, Lagos, Nigeria
               </p>
             </div>
           </div>
@@ -194,59 +176,90 @@ export default function AgreementDoc() {
                 ))}
               </div>
 
-              {/* Scope options */}
-              {section.options && (
-                <div className="mt-6 space-y-4">
-                  {section.options.map((opt) => {
-                    const isSelected = selectedOption === opt.label;
-                    return (
-                      <button
-                        key={opt.label}
-                        onClick={() => setSelectedOption(isSelected ? null : opt.label)}
-                        className={`w-full text-left p-6 rounded-xl border transition-all cursor-pointer ${
-                          isSelected
-                            ? "border-accent ring-2 ring-accent/20 bg-accent/[0.05]"
-                            : opt.recommended
-                            ? "border-accent/30 bg-accent/[0.03] hover:border-accent/50"
-                            : "border-border/50 bg-foreground/[0.01] hover:border-border"
-                        }`}
-                      >
-                        <div className="flex items-center gap-3 mb-2">
-                          <div className={`w-4 h-4 rounded-full border-2 flex items-center justify-center shrink-0 transition-all ${
-                            isSelected ? "border-accent bg-accent" : "border-foreground/20"
-                          }`}>
-                            {isSelected && (
-                              <svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round">
-                                <polyline points="20 6 9 17 4 12" />
-                              </svg>
-                            )}
-                          </div>
-                          <span className="text-[13px] font-semibold text-foreground/90">
-                            {opt.label} &mdash; {opt.name}
-                          </span>
-                          {opt.recommended && (
-                            <span className="text-[9px] font-semibold tracking-wider text-accent bg-accent/10 px-2.5 py-0.5 rounded-full uppercase">
-                              Recommended
-                            </span>
-                          )}
+              {/* Revenue tiers */}
+              {section.tiers && (
+                <div className="mt-6 mb-6">
+                  <div className="glass-card p-6">
+                    <div className="space-y-3 mb-8">
+                      {section.tiers.map((tier, i) => (
+                        <div key={i} className="flex justify-between items-center">
+                          <span className="text-[13px] text-foreground/60">{tier.range}</span>
+                          <span className="text-[16px] font-semibold text-foreground">{tier.rate}</span>
                         </div>
-                        <p className="text-[12px] text-accent/70 mb-2 pl-7" style={{ fontFamily: "Georgia, serif" }}>
-                          {opt.terms}
-                        </p>
-                        <p className="text-[13px] text-foreground/55 leading-relaxed pl-7">{opt.desc}</p>
-                      </button>
-                    );
-                  })}
+                      ))}
+                    </div>
+
+                    {/* Revenue vs Take chart */}
+                    <div>
+                      <p className="text-[11px] font-medium tracking-widest text-muted uppercase mb-4">Monthly Revenue vs Leon&apos;s Take</p>
+                      <div className="space-y-3">
+                        {[
+                          { rev: 2000, take: 500, label: "$2k" },
+                          { rev: 5000, take: 1250, label: "$5k" },
+                          { rev: 10000, take: 2000, label: "$10k" },
+                          { rev: 15000, take: 2750, label: "$15k" },
+                          { rev: 20000, take: 3250, label: "$20k" },
+                          { rev: 30000, take: 4250, label: "$30k" },
+                          { rev: 50000, take: 6250, label: "$50k" },
+                        ].map((d) => {
+                          const maxRev = 50000;
+                          const revWidth = (d.rev / maxRev) * 100;
+                          const takeWidth = (d.take / maxRev) * 100;
+                          return (
+                            <div key={d.label} className="flex items-center gap-3">
+                              <span className="text-[11px] text-foreground/40 w-10 text-right shrink-0">{d.label}</span>
+                              <div className="flex-1 relative h-5">
+                                {/* Revenue bar */}
+                                <div
+                                  className="absolute inset-y-0 left-0 rounded-full bg-foreground/8"
+                                  style={{ width: `${revWidth}%` }}
+                                />
+                                {/* Take bar */}
+                                <div
+                                  className="absolute inset-y-0 left-0 rounded-full bg-accent/40"
+                                  style={{ width: `${takeWidth}%` }}
+                                />
+                              </div>
+                              <span className="text-[11px] font-medium text-accent shrink-0 w-12 text-right">
+                                ${(d.take / 1000).toFixed(1)}k
+                              </span>
+                            </div>
+                          );
+                        })}
+                      </div>
+                      <div className="flex gap-6 mt-4">
+                        <div className="flex items-center gap-2">
+                          <div className="w-6 h-2.5 rounded-full bg-foreground/8" />
+                          <span className="text-[10px] text-muted">Gross revenue</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <div className="w-6 h-2.5 rounded-full bg-accent/40" />
+                          <span className="text-[10px] text-muted">Leon&apos;s take</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              {/* After tiers content */}
+              {section.afterTiers && (
+                <div className="space-y-3">
+                  {section.afterTiers.map((p, i) => (
+                    <p key={i} className="text-[14px] leading-[1.8] text-foreground/70">
+                      {p}
+                    </p>
+                  ))}
                 </div>
               )}
             </div>
           ))}
 
           {/* Signatures */}
-          <div className="mt-20 pt-16 border-t border-border/50" style={{ breakInside: "avoid", pageBreakInside: "avoid" }}>
+          <div className="mt-20 pt-16 border-t border-border/50 sig-block" style={{ breakInside: "avoid", pageBreakInside: "avoid" }}>
             <div className="grid md:grid-cols-2 gap-16">
               <div>
-                <p className="text-[11px] font-medium tracking-[0.2em] text-accent/70 uppercase mb-6">Consultant</p>
+                <p className="text-[11px] font-medium tracking-[0.2em] text-accent/70 uppercase mb-6">Partner</p>
                 <p className="text-[15px] font-medium text-foreground/90 mb-5">Leon Freier</p>
                 <div className="space-y-4">
                   <div>
@@ -260,7 +273,7 @@ export default function AgreementDoc() {
                 </div>
               </div>
               <div>
-                <p className="text-[11px] font-medium tracking-[0.2em] text-accent/70 uppercase mb-4">Company</p>
+                <p className="text-[11px] font-medium tracking-[0.2em] text-accent/70 uppercase mb-4">Founder</p>
                 <p className="text-[15px] font-medium text-foreground/90 mb-5">Richard Okonicha</p>
                 <div className="space-y-4">
                   <div>
@@ -283,18 +296,23 @@ export default function AgreementDoc() {
                 onClick={handleExportPDF}
                 className="inline-block text-[15px] font-medium px-8 py-3.5 rounded-xl bg-accent text-white hover:bg-accent-dark transition-colors duration-200"
               >
-                Agreement
+                Export PDF
               </button>
-              <p className="text-[13px] text-foreground/35 mt-3">Download as PDF.</p>
+              <p className="text-[13px] text-foreground/35 mt-3">Print or save as PDF.</p>
             </div>
-            <div className="pt-4">
+            <div className="pt-4 flex justify-center gap-6">
+              <a
+                href="/fugoku"
+                className="text-[13px] font-medium text-foreground/50 hover:text-accent transition-colors"
+              >
+                ← Working Agreement
+              </a>
               <a
                 href="/fugoku/execution"
-                className="inline-block text-[15px] font-medium px-8 py-3.5 rounded-xl border border-accent/30 text-accent hover:bg-accent/[0.05] transition-colors duration-200"
+                className="text-[13px] font-medium text-foreground/50 hover:text-accent transition-colors"
               >
-                Execution
+                Execution →
               </a>
-              <p className="text-[13px] text-foreground/35 mt-3">EOS foundation homework.</p>
             </div>
           </div>
 
