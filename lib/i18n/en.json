@@ -116,15 +116,8 @@
   "alignment": {
     "hero_title": "What You're Aligning With",
     "hero_intro": "I build companies. Right now that's a demand intelligence platform for vacation rental operators and a mentor-trained AI product for consultants. Before that, I built a luxury short-term rental business in Vietnam from scratch and ran it for ten years. This page is how I actually operate.",
-    "values_title": "Core Values",
-    "drive_title": "Drive",
-    "drive_short": "The work starts before the conditions are perfect. If you need someone to tell you to start, we're not aligned.",
-    "craft_title": "Craft",
-    "craft_short": "If it ships, it should look like someone cared. The details aren't details.",
-    "clarity_title": "Clarity",
-    "clarity_short": "Say what you mean. Say it once. If something isn't working, I'll tell you. I expect the same back.",
     "wired_title": "How I'm Wired",
-    "culture_title": "Communication Style",
+    "culture_title": "Cultural Wiring",
     "pi_title": "Behavioral Profile",
     "cta_title": "Worth a conversation",
     "cta_sub": "No pitch, no deck. Just two people figuring out if there's a fit.",
@@ -153,6 +146,10 @@
     "formality": "Formality",
     "formality_desc": "Flexible, informal, tolerant of uncertainty",
     "low": "Low",
-    "high": "High"
+    "high": "High",
+    "implications_title": "What this means in practice",
+    "implication_1": "If you need consensus before acting, we'll clash.",
+    "implication_2": "If you wrap criticism in diplomacy, I'll miss it.",
+    "implication_3": "If 90% done isn't good enough to ship, we'll get along."
   }
 }

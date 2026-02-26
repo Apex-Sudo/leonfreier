@@ -4,7 +4,7 @@ import { getDictionary, type Locale } from "@/lib/i18n";
 export const metadata: Metadata = {
   title: "Alignment — Leon Freier",
   description:
-    "Core values, Culture Map, and Predictive Index profile. What you're aligning with before we work together.",
+    "Culture Map, Predictive Index, and what it means to work with me.",
 };
 
 // Server component by default (FHDP rule #9)
@@ -129,29 +129,6 @@ export default async function AlignmentPage({ params }: { params: Promise<{ lang
         </div>
       </section>
 
-      {/* ═══ Values ═══ */}
-      <section className="px-6 py-16 border-t border-border">
-        <div className="max-w-2xl mx-auto">
-          <h2 className="text-[18px] font-semibold tracking-tight text-foreground mb-8">
-            {t.values_title}
-          </h2>
-          <div className="space-y-6">
-            <div>
-              <h3 className="text-[15px] font-semibold tracking-tight mb-1">{t.drive_title}</h3>
-              <p className="text-[13px] text-foreground/40">{t.drive_short}</p>
-            </div>
-            <div>
-              <h3 className="text-[15px] font-semibold tracking-tight mb-1">{t.craft_title}</h3>
-              <p className="text-[13px] text-foreground/40">{t.craft_short}</p>
-            </div>
-            <div>
-              <h3 className="text-[15px] font-semibold tracking-tight mb-1">{t.clarity_title}</h3>
-              <p className="text-[13px] text-foreground/40">{t.clarity_short}</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* ═══ How I'm Wired ═══ */}
       <section className="px-6 py-16 border-t border-border">
         <div className="max-w-2xl mx-auto">
@@ -167,6 +144,20 @@ export default async function AlignmentPage({ params }: { params: Promise<{ lang
           <div>
             <h3 className="text-[13px] font-medium text-foreground/40 mb-6">{t.pi_title}</h3>
             <PIChart t={t} />
+          </div>
+        </div>
+      </section>
+
+      {/* ═══ What This Means ═══ */}
+      <section className="px-6 py-16 border-t border-border">
+        <div className="max-w-2xl mx-auto">
+          <h2 className="text-[18px] font-semibold tracking-tight text-foreground mb-8">
+            {t.implications_title}
+          </h2>
+          <div className="space-y-4">
+            <p className="text-[15px] text-foreground/70">{t.implication_1}</p>
+            <p className="text-[15px] text-foreground/70">{t.implication_2}</p>
+            <p className="text-[15px] text-foreground/70">{t.implication_3}</p>
           </div>
         </div>
       </section>
