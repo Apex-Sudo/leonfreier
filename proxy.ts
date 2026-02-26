@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 
 const locales = ['vi', 'zh', 'ru'];
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
   // Check if path starts with a non-default locale
