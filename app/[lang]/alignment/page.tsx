@@ -130,7 +130,7 @@ export default async function AlignmentPage({ params }: { params: Promise<{ lang
       </section>
 
       {/* ═══ How I'm Wired ═══ */}
-      <section className="px-6 py-16 border-t border-border">
+      <section className="px-6 py-16">
         <div className="max-w-2xl mx-auto">
           <h2 className="text-[18px] font-semibold tracking-tight text-foreground mb-10">
             {t.wired_title}
@@ -141,7 +141,7 @@ export default async function AlignmentPage({ params }: { params: Promise<{ lang
             <CultureMapChart t={t} />
           </div>
 
-          <div>
+          <div className="pt-16 border-t border-border">
             <h3 className="text-[13px] font-medium text-foreground/40 mb-6">{t.pi_title}</h3>
             <PIChart t={t} />
           </div>
@@ -149,7 +149,7 @@ export default async function AlignmentPage({ params }: { params: Promise<{ lang
       </section>
 
       {/* ═══ What This Means ═══ */}
-      <section className="px-6 py-16 border-t border-border">
+      <section className="px-6 py-16">
         <div className="max-w-2xl mx-auto">
           <h2 className="text-[18px] font-semibold tracking-tight text-foreground mb-8">
             {t.implications_title}
