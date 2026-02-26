@@ -148,8 +148,10 @@
     "low": "Thấp",
     "high": "Cao",
     "implications_title": "Điều này có nghĩa là gì trong thực tế?",
-    "implication_1": "Nếu bạn cần sự đồng thuận trước khi hành động, chúng ta sẽ xung đột.",
-    "implication_2": "Nếu bạn bao bọc sự chỉ trích bằng ngoại giao, tôi sẽ không nhận ra.",
-    "implication_3": "Nếu 90% hoàn thành chưa đủ tốt để phát hành, chúng ta sẽ tiếp tục."
+    "implication_1": "Nếu bạn cần sự đồng thuận trước khi hành động, chúng ta sẽ xung đột. Tôi hành động nhanh chóng, điều chỉnh hướng đi nhanh hơn, và mong đợi điều tương tự.",
+    "implication_2": "Nếu bạn bao bọc sự phê bình trong lời nói ngoại giao, tôi sẽ không nhận ra. Phản hồi trực tiếp là cách tôi cải thiện và cũng là cách tôi mong đợi được cải thiện.",
+    "implication_3": "Nếu 90% hoàn thành chưa đủ tốt để phát hành, chúng ta sẽ tiếp tục. 10% cuối cùng chính là nơi công việc của đa số mọi người thường gặp vấn đề.",
+    "implication_4": "Tôi không biến mất khi mọi việc trở nên khó khăn. Càng khó khăn, tôi càng tập trung hơn.",
+    "implication_5": "Tôi coi trọng mối quan hệ hơn là giao dịch. Nếu không có sự đồng thuận, tôi sẽ nói rõ điều đó trước khi cả hai bên mất thời gian."
   }
 }

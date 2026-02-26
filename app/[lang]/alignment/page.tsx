@@ -158,6 +158,8 @@ export default async function AlignmentPage({ params }: { params: Promise<{ lang
             <p className="text-[15px] text-foreground/70">{t.implication_1}</p>
             <p className="text-[15px] text-foreground/70">{t.implication_2}</p>
             <p className="text-[15px] text-foreground/70">{t.implication_3}</p>
+            <p className="text-[15px] text-foreground/70">{t.implication_4}</p>
+            <p className="text-[15px] text-foreground/70">{t.implication_5}</p>
           </div>
         </div>
       </section>

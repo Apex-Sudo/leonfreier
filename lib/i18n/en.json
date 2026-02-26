@@ -148,8 +148,10 @@
     "low": "Low",
     "high": "High",
     "implications_title": "What this means in practice",
-    "implication_1": "If you need consensus before acting, we'll clash.",
-    "implication_2": "If you wrap criticism in diplomacy, I'll miss it.",
-    "implication_3": "If 90% done isn't good enough to ship, we'll get along."
+    "implication_1": "If you need consensus before acting, we'll clash. I move fast, course-correct faster, and expect the same.",
+    "implication_2": "If you wrap criticism in diplomacy, I'll miss it. Direct feedback is how I improve and how I expect to be improved.",
+    "implication_3": "If 90% done isn't good enough to ship, we'll get along. The last 10% is where most people's work falls apart.",
+    "implication_4": "I don't disappear when things get hard. The worse the situation, the more engaged I get.",
+    "implication_5": "I value the relationship over the deal. If the alignment isn't there, I'll say so before it costs us both time."
   }
 }
