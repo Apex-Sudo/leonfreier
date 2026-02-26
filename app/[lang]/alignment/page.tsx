@@ -165,13 +165,16 @@ export default function ValuesPage() {
       {/* ═══ Intro ═══ */}
       <section className="px-6 py-14">
         <div className="max-w-2xl mx-auto">
+          <p className="text-[15px] md:text-[16px] leading-relaxed text-foreground/80 mb-6 font-medium">
+            This is who I am and how I work. Not the resume version. The
+            actual operating system: how I make decisions, communicate,
+            handle friction, and what I value. If we&rsquo;re going to work
+            together, this is what you&rsquo;re signing up for.
+          </p>
           <p className="text-[15px] md:text-[16px] leading-relaxed text-foreground/60 mb-6">
             Most people skip this part. They talk about the project, the
             terms, the timeline. Then six months in, something breaks and
-            nobody can explain why.
-          </p>
-          <p className="text-[15px] md:text-[16px] leading-relaxed text-foreground/60 mb-6">
-            It&rsquo;s almost never the work. It&rsquo;s the wiring
+            nobody can explain why. It&rsquo;s almost never the work. It&rsquo;s the wiring
             underneath.
           </p>
           <div className="pl-6 border-l-2 border-accent/20 space-y-2 mb-6">
