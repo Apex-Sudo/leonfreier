@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { getDictionary, type Locale } from "@/lib/i18n";
 
 export const metadata: Metadata = {
   title: "Alignment — Leon Freier",
@@ -8,68 +9,15 @@ export const metadata: Metadata = {
 
 // Server component by default (FHDP rule #9)
 
-/* ─── Culture Map Data ─── */
-const cultureAxes = [
-  {
-    label: "Scheduling",
-    subtitle: "How I treat deadlines and time commitments",
-    left: "Linear",
-    right: "Flexible",
-    value: 18,
-  },
-  {
-    label: "Trust",
-    subtitle: "How trust is built: through delivery or through relationship",
-    left: "Task-based",
-    right: "Relationship-based",
-    value: 45,
-  },
-  {
-    label: "Communication",
-    subtitle: "How I say things: explicit and brief, or wrapped in context",
-    left: "Direct / Low-context",
-    right: "High-context",
-    value: 15,
-  },
-  {
-    label: "Feedback",
-    subtitle: "How I deliver criticism: straight or softened",
-    left: "Direct negative",
-    right: "Indirect",
-    value: 20,
-  },
-];
-
-/* ─── PI Data ─── */
-const piFactors = [
-  {
-    label: "Dominance",
-    shortLabel: "A",
-    value: 92,
-    desc: "Independent, assertive, drives change",
-  },
-  {
-    label: "Extraversion",
-    shortLabel: "B",
-    value: 38,
-    desc: "Task-focused, private, doesn't need an audience",
-  },
-  {
-    label: "Patience",
-    shortLabel: "C",
-    value: 12,
-    desc: "Intense, restless, needs variety and pace",
-  },
-  {
-    label: "Formality",
-    shortLabel: "D",
-    value: 28,
-    desc: "Flexible, informal, tolerant of uncertainty",
-  },
-];
-
 /* ─── Culture Map Chart ─── */
-function CultureMapChart() {
+function CultureMapChart({ t }: { t: Record<string, string> }) {
+  const cultureAxes = [
+    { label: t.scheduling, subtitle: t.scheduling_sub, left: t.linear, right: t.flexible, value: 18 },
+    { label: t.trust, subtitle: t.trust_sub, left: t.task_based, right: t.relationship_based, value: 45 },
+    { label: t.communication, subtitle: t.communication_sub, left: t.direct, right: t.high_context, value: 15 },
+    { label: t.feedback, subtitle: t.feedback_sub, left: t.direct_negative, right: t.indirect, value: 20 },
+  ];
+
   return (
     <div className="space-y-8">
       {cultureAxes.map((d) => (
@@ -77,8 +25,8 @@ function CultureMapChart() {
           <p className="text-[13px] font-medium text-foreground mb-0.5">
             {d.label}
           </p>
-          <p className="text-[11px] text-foreground/35 mb-2">{d.subtitle}</p>
-          <div className="flex justify-between text-[11px] text-muted mb-2">
+          <p className="text-[11px] text-foreground/40 mb-2">{d.subtitle}</p>
+          <div className="flex justify-between text-[11px] text-foreground/40 mb-2">
             <span>{d.left}</span>
             <span>{d.right}</span>
           </div>
@@ -102,12 +50,19 @@ function CultureMapChart() {
 }
 
 /* ─── PI Bar Chart ─── */
-function PIChart() {
+function PIChart({ t }: { t: Record<string, string> }) {
+  const piFactors = [
+    { label: t.dominance, shortLabel: "A", value: 92, desc: t.dominance_desc },
+    { label: t.extraversion, shortLabel: "B", value: 38, desc: t.extraversion_desc },
+    { label: t.patience, shortLabel: "C", value: 12, desc: t.patience_desc },
+    { label: t.formality, shortLabel: "D", value: 28, desc: t.formality_desc },
+  ];
+
   return (
     <div className="space-y-6">
-      <div className="flex justify-between text-[10px] text-foreground/25 mb-1">
-        <span>Low</span>
-        <span>High</span>
+      <div className="flex justify-between text-[11px] text-foreground/40 mb-1">
+        <span>{t.low}</span>
+        <span>{t.high}</span>
       </div>
       {piFactors.map((f) => (
         <div key={f.label}>
@@ -143,101 +98,86 @@ function PIChart() {
           <p className="text-[11px] text-foreground/40 mt-1">{f.desc}</p>
         </div>
       ))}
-      <p className="text-[11px] text-foreground/30 pt-2">
-        Predictive Index: Venturer profile.
+      <p className="text-[11px] text-foreground/40 pt-2">
+        {t.pi_label}
       </p>
     </div>
   );
 }
 
 /* ─── Page ─── */
-export default function ValuesPage() {
+export default async function AlignmentPage({ params }: { params: Promise<{ lang: string }> }) {
+  const { lang } = await params;
+  const dict = getDictionary(lang as Locale);
+  const t = dict.alignment;
+
   return (
     <main className="min-h-screen">
 
       {/* ═══ Hero ═══ */}
       <section className="gradient-hero px-6 pt-28 pb-16 md:pt-36 md:pb-24">
         <div className="max-w-2xl mx-auto">
-          <p className="text-[11px] font-medium tracking-widest text-accent uppercase mb-6">Alignment</p>
-          <h1 className="text-4xl md:text-5xl font-semibold tracking-tight mb-4">
-            What You&rsquo;re Aligning With
+          <h1 className="text-3xl md:text-4xl font-semibold tracking-tight mb-4">
+            {t.hero_title}
           </h1>
-          <p className="text-[17px] text-foreground/60 leading-relaxed">
-            The things most partnerships get wrong are never in the contract.
+          <p className="text-[18px] text-foreground/70 leading-relaxed">
+            {t.hero_sub}
           </p>
         </div>
       </section>
 
       {/* ═══ Intro ═══ */}
-      <section className="px-6 py-14">
+      <section className="px-6 py-16">
         <div className="max-w-2xl mx-auto">
-          <p className="text-[15px] md:text-[16px] leading-relaxed text-foreground/80 mb-6 font-medium">
-            This is who I am and how I work. Not the resume version. The
-            actual operating system: how I make decisions, communicate,
-            handle friction, and what I value. If we&rsquo;re going to work
-            together, this is what you&rsquo;re signing up for.
+          <p className="text-[15px] leading-relaxed text-foreground/70 mb-6 font-medium">
+            {t.intro_1}
           </p>
-          <p className="text-[15px] md:text-[16px] leading-relaxed text-foreground/60 mb-6">
-            Most people skip this part. They talk about the project, the
-            terms, the timeline. Then six months in, something breaks and
-            nobody can explain why. It&rsquo;s almost never the work. It&rsquo;s the wiring
-            underneath.
+          <p className="text-[15px] leading-relaxed text-foreground/70 mb-6">
+            {t.intro_2}
           </p>
           <div className="pl-6 border-l-2 border-accent/20 space-y-2 mb-6">
-            <p className="text-[14px] text-foreground/50">One person optimizes for speed, the other for consensus.</p>
-            <p className="text-[14px] text-foreground/50">One says what they think, the other wraps it in three layers of diplomacy.</p>
-            <p className="text-[14px] text-foreground/50">One ships at 90%, the other can&rsquo;t let go at 99%.</p>
+            <p className="text-[13px] text-foreground/40">{t.contrast_1}</p>
+            <p className="text-[13px] text-foreground/40">{t.contrast_2}</p>
+            <p className="text-[13px] text-foreground/40">{t.contrast_3}</p>
           </div>
-          <p className="text-[15px] md:text-[16px] leading-relaxed text-foreground/60">
-            Misaligned values don&rsquo;t cause arguments. They cause slow,
-            invisible friction that drains both sides until someone quits
-            without a reason they can articulate.
+          <p className="text-[15px] leading-relaxed text-foreground/70">
+            {t.intro_3}
           </p>
         </div>
       </section>
 
       {/* ═══ Values ═══ */}
-      <section className="px-6 pb-16 pt-2">
+      <section className="px-6 py-16 border-t border-border">
         <div className="max-w-2xl mx-auto">
-          <h2 className="text-[11px] font-medium tracking-widest text-muted uppercase mb-8">
-            Core Values
+          <h2 className="text-[18px] font-semibold tracking-tight text-foreground mb-10">
+            {t.values_title}
           </h2>
-          <div className="space-y-5">
-            <div className="section-module">
+          <div className="space-y-10">
+            <div>
               <div className="flex items-baseline gap-3 mb-2">
-                <span className="text-[13px] font-mono text-accent/60">01</span>
-                <h3 className="text-[18px] font-semibold tracking-tight">Drive</h3>
+                <span className="text-[11px] font-mono text-accent/60">01</span>
+                <h3 className="text-[15px] font-semibold tracking-tight">{t.drive_title}</h3>
               </div>
-              <p className="text-[15px] leading-relaxed text-foreground/70 pl-9">
-                I don&rsquo;t wait for permission, motivation, or the right
-                moment. The work starts before the conditions are perfect.
-                High energy isn&rsquo;t a side effect, it&rsquo;s the engine. If you
-                need someone to tell you to start, we&rsquo;re not aligned.
+              <p className="text-[15px] leading-relaxed text-foreground/70 pl-7">
+                {t.drive_desc}
               </p>
             </div>
-            <div className="section-module">
+            <div>
               <div className="flex items-baseline gap-3 mb-2">
-                <span className="text-[13px] font-mono text-accent/60">02</span>
-                <h3 className="text-[18px] font-semibold tracking-tight">Craft</h3>
+                <span className="text-[11px] font-mono text-accent/60">02</span>
+                <h3 className="text-[15px] font-semibold tracking-tight">{t.craft_title}</h3>
               </div>
-              <p className="text-[15px] leading-relaxed text-foreground/70 pl-9">
-                No &ldquo;good enough.&rdquo; If it ships, it should look like
-                someone cared. The details aren&rsquo;t details. The formatting,
-                the follow-through, the extra pass before it goes out.
-                That&rsquo;s not perfectionism. It&rsquo;s respect for the work
-                and the person receiving it.
+              <p className="text-[15px] leading-relaxed text-foreground/70 pl-7">
+                {t.craft_desc}
               </p>
             </div>
-            <div className="section-module">
+            <div>
               <div className="flex items-baseline gap-3 mb-2">
-                <span className="text-[13px] font-mono text-accent/60">03</span>
-                <h3 className="text-[18px] font-semibold tracking-tight">Clarity</h3>
+                <span className="text-[11px] font-mono text-accent/60">03</span>
+                <h3 className="text-[15px] font-semibold tracking-tight">{t.clarity_title}</h3>
               </div>
-              <p className="text-[15px] leading-relaxed text-foreground/70 pl-9">
-                Say what you mean. Say it once. No hedging, no padding, no
-                diplomatic fog. If something isn&rsquo;t working, I&rsquo;ll
-                tell you. I expect the same back. Clarity isn&rsquo;t bluntness
-                for its own sake. It&rsquo;s the fastest way to trust.
+              <p className="text-[15px] leading-relaxed text-foreground/70 pl-7">
+                {t.clarity_desc}
               </p>
             </div>
           </div>
@@ -245,85 +185,61 @@ export default function ValuesPage() {
       </section>
 
       {/* ═══ Culture Map ═══ */}
-      <section className="px-6 py-16">
-        <div className="max-w-3xl mx-auto">
-          <div className="section-module">
-            <h2 className="text-[11px] font-medium tracking-widest text-muted uppercase mb-3">
-              How I Operate
-            </h2>
-            <p className="text-[14px] text-foreground/50 mb-10">
-              Based on Erin Meyer&rsquo;s{" "}
-              <a
-                href="https://erinmeyer.com/books/the-culture-map/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-accent hover:underline"
-              >
-                Culture Map
-              </a>
-              . Where I sit on the axes that matter in working relationships.
+      <section className="px-6 py-16 border-t border-border">
+        <div className="max-w-2xl mx-auto">
+          <h2 className="text-[18px] font-semibold tracking-tight text-foreground mb-3">
+            {t.culture_title}
+          </h2>
+          <p className="text-[13px] text-foreground/40 mb-10">
+            {t.culture_sub}
+          </p>
+          <CultureMapChart t={t} />
+          <div className="pl-6 border-l-2 border-accent/20 space-y-3 mt-8">
+            <p className="text-[13px] text-foreground/40 italic leading-relaxed">
+              &ldquo;{t.culture_quote_1}&rdquo;
             </p>
-            <CultureMapChart />
-            <div className="pl-6 border-l-2 border-accent/20 space-y-3 mt-8">
-              <p className="text-[13px] text-foreground/40 italic leading-relaxed">
-                &ldquo;Good communication is precise, simple, explicit, and clear. Messages are expressed and understood at face value.&rdquo;
-              </p>
-              <p className="text-[13px] text-foreground/40 italic leading-relaxed">
-                &ldquo;Trust is built through work. We work well together, we like each other&rsquo;s work, we like each other, so I trust you.&rdquo;
-              </p>
-              <p className="text-[11px] text-foreground/25 mt-2">
-                &mdash; Erin Meyer, <em>The Culture Map</em>
-              </p>
-            </div>
+            <p className="text-[13px] text-foreground/40 italic leading-relaxed">
+              &ldquo;{t.culture_quote_2}&rdquo;
+            </p>
+            <p className="text-[11px] text-foreground/40 mt-2">
+              &mdash; {t.culture_source}
+            </p>
           </div>
         </div>
       </section>
 
       {/* ═══ Predictive Index ═══ */}
-      <section className="px-6 pb-20">
-        <div className="max-w-3xl mx-auto">
-          <div className="section-module">
-            <h2 className="text-[11px] font-medium tracking-widest text-muted uppercase mb-3">
-              How I&rsquo;m Wired
-            </h2>
-            <p className="text-[14px] text-foreground/50 mb-10">
-              Based on the{" "}
-              <a
-                href="https://www.predictiveindex.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-accent hover:underline"
-              >
-                Predictive Index
-              </a>
-              . Behavioral DNA. Not personality, not preference. The pattern
-              underneath.
+      <section className="px-6 py-16 border-t border-border">
+        <div className="max-w-2xl mx-auto">
+          <h2 className="text-[18px] font-semibold tracking-tight text-foreground mb-3">
+            {t.pi_title}
+          </h2>
+          <p className="text-[13px] text-foreground/40 mb-10">
+            {t.pi_sub}
+          </p>
+          <PIChart t={t} />
+          <div className="pl-6 border-l-2 border-accent/20 space-y-3 mt-8">
+            <p className="text-[13px] text-foreground/40 italic leading-relaxed">
+              &ldquo;{t.pi_quote_1}&rdquo;
             </p>
-            <PIChart />
-            <div className="pl-6 border-l-2 border-accent/20 space-y-3 mt-8">
-              <p className="text-[13px] text-foreground/40 italic leading-relaxed">
-                &ldquo;A self-starting, self-motivating, and goal-oriented risk-taker. This Behavioral Pattern is extremely wide, which means that observed behaviors are very strongly expressed and needs are very strongly felt.&rdquo;
-              </p>
-              <p className="text-[13px] text-foreground/40 italic leading-relaxed">
-                &ldquo;Risk-taking, daring, and focus on future goals; more concerned with where they&rsquo;re going than either how they&rsquo;ll get there, or where they&rsquo;ve been.&rdquo;
-              </p>
-              <p className="text-[11px] text-foreground/25 mt-2">
-                &mdash; Predictive Index Behavioral Report, Feb 2026
-              </p>
-            </div>
+            <p className="text-[13px] text-foreground/40 italic leading-relaxed">
+              &ldquo;{t.pi_quote_2}&rdquo;
+            </p>
+            <p className="text-[11px] text-foreground/40 mt-2">
+              &mdash; {t.pi_source}
+            </p>
           </div>
         </div>
       </section>
 
       {/* ═══ CTA ═══ */}
-      <section className="px-6 pb-24">
+      <section className="px-6 pt-16 pb-24">
         <div className="max-w-2xl mx-auto text-center">
-          <div className="section-module py-12 px-8">
-            <p className="text-[20px] md:text-[22px] font-semibold tracking-tight mb-3">
-              If this didn&rsquo;t scare you away
+            <p className="text-[18px] font-semibold tracking-tight mb-3">
+              {t.cta_title}
             </p>
-            <p className="text-[15px] text-foreground/50 mb-8">
-              Let&rsquo;s see if there&rsquo;s something worth building together.
+            <p className="text-[13px] text-foreground/40 mb-8">
+              {t.cta_sub}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
@@ -343,7 +259,6 @@ export default function ValuesPage() {
                 Email
               </a>
             </div>
-          </div>
         </div>
       </section>
 
