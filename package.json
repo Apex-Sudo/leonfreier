@@ -9,5 +9,10 @@
     "react-dom": "^19.2.4",
     "tailwindcss": "^4.2.0",
     "typescript": "^5.9.3"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
   }
 }
