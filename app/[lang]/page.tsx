@@ -47,18 +47,6 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
 
             <div className="glass-card p-7 transition-all duration-200 hover:border-accent/20 hover:shadow-md">
               <div className="flex items-baseline justify-between gap-4">
-                <a href="https://danangbeachvillas.com" target="_blank" rel="noopener noreferrer" className="font-semibold text-foreground hover:text-accent hover:underline decoration-accent/30 underline-offset-4 transition-colors">
-                  Da Nang Beach Villas
-                </a>
-                <span className="text-[13px] text-muted shrink-0">{t.dnbv_date}</span>
-              </div>
-              <p className="text-base leading-relaxed text-foreground/60 mt-2">
-                {t.dnbv_deep}
-              </p>
-            </div>
-
-            <div className="glass-card p-7 transition-all duration-200 hover:border-accent/20 hover:shadow-md">
-              <div className="flex items-baseline justify-between gap-4">
                 <a href="https://apexalpha.app" target="_blank" rel="noopener noreferrer" className="font-semibold text-foreground hover:text-accent hover:underline decoration-accent/30 underline-offset-4 transition-colors">
                   ApexAlpha
                 </a>
@@ -78,6 +66,30 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
               </div>
               <p className="text-base leading-relaxed text-foreground/60 mt-2">
                 {t.fh_deep}
+              </p>
+            </div>
+
+            <div className="glass-card p-7 transition-all duration-200 hover:border-accent/20 hover:shadow-md">
+              <div className="flex items-baseline justify-between gap-4">
+                <a href="https://maxresult.ai" target="_blank" rel="noopener noreferrer" className="font-semibold text-foreground hover:text-accent hover:underline decoration-accent/30 underline-offset-4 transition-colors">
+                  MaxResult
+                </a>
+                <span className="text-[13px] text-muted shrink-0">{t.mr_date}</span>
+              </div>
+              <p className="text-base leading-relaxed text-foreground/60 mt-2">
+                {t.mr_deep}
+              </p>
+            </div>
+
+            <div className="glass-card p-7 transition-all duration-200 hover:border-accent/20 hover:shadow-md">
+              <div className="flex items-baseline justify-between gap-4">
+                <a href="https://danangbeachvillas.com" target="_blank" rel="noopener noreferrer" className="font-semibold text-foreground hover:text-accent hover:underline decoration-accent/30 underline-offset-4 transition-colors">
+                  Da Nang Beach Villas
+                </a>
+                <span className="text-[13px] text-muted shrink-0">{t.dnbv_date}</span>
+              </div>
+              <p className="text-base leading-relaxed text-foreground/60 mt-2">
+                {t.dnbv_deep}
               </p>
             </div>
 
