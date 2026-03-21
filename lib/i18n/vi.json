@@ -18,7 +18,16 @@
     "fh_deep": "Hệ thống hóa kiến thức. Chuyên môn trong lĩnh vực được trích xuất và triển khai dưới dạng trí tuệ nhân tạo (AI) với chi phí biên bằng không.",
     "see_work": "Xem các nước đi",
     "mr_date": "2026 – hiện tại · Hamburg, Đức",
-    "mr_deep": "Dịch vụ phần mềm chuyên biệt theo chiều dọc (Vertical micro-SaaS). Công cụ tùy chỉnh dành cho các ngành chưa được số hóa đầy đủ, triển khai trong vài ngày."
+    "mr_deep": "Dịch vụ phần mềm chuyên biệt theo chiều dọc (Vertical micro-SaaS). Công cụ tùy chỉnh dành cho các ngành chưa được số hóa đầy đủ, triển khai trong vài ngày.",
+    "current_ventures": "Các dự án hiện tại",
+    "cat_demand": "THÔNG TIN VỀ NỀN TẢNG CẦU",
+    "cat_knowledge": "HỆ THỐNG HÓA KIẾN THỨC",
+    "cat_saas": "MICRO-SAAS",
+    "cat_hospitality": "NGÀNH DỊCH VỤ KHÁCH SẠN",
+    "philosophy": "Triết học",
+    "philosophy_p1": "Mọi thứ ở đây đều được xây dựng mà không cần vốn từ bên ngoài. Đó không phải là vấn đề ý thức hệ, mà đơn giản là kết quả của những tính toán thực tế. Mỗi đồng tiền kiếm được, mỗi sản phẩm xuất xưởng, mỗi bài học đều được chi trả trực tiếp.",
+    "philosophy_p2": "Điều đó có nghĩa là: Tôi hành động nhanh chóng, không chờ đợi sự cho phép, và tôi xây dựng các hệ thống có tuổi thọ lâu dài hơn cả giai đoạn sprint đã tạo ra chúng. Nếu bạn đang tìm kiếm một người có thể hoàn thành dự án trong vài ngày nhưng lại suy nghĩ với tầm nhìn dài hạn, chúng ta nên trao đổi.",
+    "see_alignment": "Hãy xem cách tôi làm việc"
   },
   "spielzuege_index": {
     "title": "Các pha bóng",

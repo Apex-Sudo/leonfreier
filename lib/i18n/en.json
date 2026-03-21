@@ -18,7 +18,16 @@
     "fh_deep": "Knowledge codification. Domain expertise extracted and deployed as AI at zero marginal cost.",
     "mr_date": "2026 – present · Hamburg, Germany",
     "mr_deep": "Vertical micro-SaaS. Bespoke tooling for underdigitized industries, shipped in days.",
-    "see_work": "See the Spielzüge"
+    "see_work": "See the Spielzüge",
+    "current_ventures": "Current Ventures",
+    "cat_demand": "DEMAND INTELLIGENCE",
+    "cat_knowledge": "KNOWLEDGE CODIFICATION",
+    "cat_saas": "MICRO-SAAS",
+    "cat_hospitality": "HOSPITALITY",
+    "philosophy": "Philosophy",
+    "philosophy_p1": "Everything here was built without outside capital. That's not ideology, it's just how the math worked out. Every dollar earned, every product shipped, every lesson paid for directly.",
+    "philosophy_p2": "What that means in practice: I move fast, I don't wait for permission, and I build systems that outlast the sprint that created them. If you're looking for someone who ships in days and thinks in years, we should talk.",
+    "see_alignment": "See how I operate"
   },
   "spielzuege_index": {
     "title": "Spielzüge",

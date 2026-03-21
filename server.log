@@ -1,0 +1,15 @@
+
+> dev
+> next dev
+
+⚠ Port 3000 is in use by an unknown process, using available port 3003 instead.
+▲ Next.js 16.1.6 (Turbopack)
+- Local:         http://localhost:3003
+- Network:       http://192.168.179.64:3003
+- Environments: .env.local
+
+✓ Starting...
+✓ Ready in 668ms
+ GET /en/alignment 404 in 1066ms (compile: 908ms, proxy.ts: 89ms, render: 69ms)
+ GET /en/spielzuege 404 in 31ms (compile: 5ms, proxy.ts: 4ms, render: 23ms)
+[?25h
